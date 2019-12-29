@@ -7,7 +7,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     pkg: this.file.readJSON('package.json'),
-
+    info:{
+      bootstrap: 'bootstrap',
+      configDir: 'frontEndConfigFiles',
+      components: '../components',
+      scss: 'scss',
+      src: '../src'
+    },
     // build the scss file
     sass: {
       dev: {
@@ -15,18 +21,34 @@ module.exports = function (grunt) {
           implementation: sass,
           sourceMap: true,
           includePaths: [
-            'bootstrap/scss'
+            '<%= info.bootstrap %>/scss'
           ]
         },
         files: {
-          '../src/css/main.css' : 'scss/main.scss'
+          '<%= info.src %>/css/main.css' : '<%= info.scss %>/main.scss'
         }
       }
     },
+    // check for js syntax errors
+    jshint: {
+      options: {
+        force: true,
+        jshintrc: '<%= info.configDir %>/.jshintrc'
+      },
+      all: [
+        // front end
+        '<%= info.components %>/**/*.js',
+      ]
+    },  
+    // watch files
     watch:{
       sass:{
-        files:[ 'components/**.scss','scss/**.scss' ],
+        files:[ '../components/**.scss','scss/**.scss' ],
         tasks: ['sass:dev']
+      },
+      jshint:{
+        files:['<%= info.components %>/**/*.js'],
+        taskas: ['jshint']
       }
     }
 

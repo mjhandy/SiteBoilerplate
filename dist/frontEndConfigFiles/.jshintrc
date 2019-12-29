@@ -1,0 +1,36 @@
+{
+  "node": true,
+  "browser": true,
+  "esnext": true,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": false,
+  "immed": true,
+  "newcap": true,
+  "noarg": true,
+  "undef": false,
+  "strict": false,
+  "asi": true,
+  "expr": true,
+  
+  "predef":   [
+    "$",   
+    "Modernizr",
+    "ga",
+    "fakewaffle",
+    "hljs",
+    "WebFont",
+    "ScrollMagic",
+    "jQuery",
+    "lity",
+    "AOS",
+    "d3",
+    "d3plus",
+    "twttr",
+    "reinits",
+    "custData",
+    "_",
+    "translationDictionary",
+    "dataLayer"
+  ]
+}
