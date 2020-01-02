@@ -10,8 +10,8 @@ module.exports = function (grunt) {
     info: {
       bootstrap: 'bootstrap',
       configDir: 'frontEndConfigFiles',
-      components: '../components',
-      scripts: '../scripts',
+      components: 'components',
+      scripts: 'scripts',
       scss: 'scss',
       src: '../src'
     },
@@ -106,11 +106,11 @@ module.exports = function (grunt) {
     // watch files
     watch: {
       cssComb: {
-        files: ['../components/**.scss', 'scss/**.scss'],
+        files: ['<%= info.components %>/**/**.scss', 'scss/**.scss'],
         tasks: ['csscomb']
       },
       sass: {
-        files: ['../components/**.scss', 'scss/**.scss'],
+        files: ['<%= info.components %>/**/**.scss', 'scss/**.scss'],
         tasks: ['sass:dev']
       },
       jshint: {

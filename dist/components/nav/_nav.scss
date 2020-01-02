@@ -1,16 +1,44 @@
-.navBar{
-  width: 100wv;
-  height: 60px;
+.mainNav{
+  width: 100vw;
+  // height: 44px;
   background-color: $black;
 }
 
-.megamenu {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	right: 0;
-  padding: 15px;
-  &-li{
-    position: static;
+
+.navbar{
+  &-toggler{
+    color: $white;
+    fill: $white;
+    svg{
+      width: 20px;
+    }
   }
+  &-collapse{
+    // background-color: $white;
+  }
+  .nav{
+    &-link{
+      //color: $white;
+    }
+    &-item{
+      &.show{
+       background-color: $white;   
+      }
+      &.megamenu{
+        position: static;
+
+        .dropdown-menu{
+          background: none;
+          border: none;
+          width: 100%;
+          .row{
+            @include media-breakpoint-up(xl){
+              width: 1024px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

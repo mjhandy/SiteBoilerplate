@@ -51,12 +51,13 @@ $h1-font-size: 36px;
 $h2-font-size: 24px;
 $h3-font-size: 18px;
 
-/* 5px */
+// nav bar
 
+$navbar-padding-y :  0;
+$navbar-padding-x : 5px;
+$navbar-nav-link-padding-x: 0;
+$navbar-nav-link-padding-y: 0;
 $nav-link-padding-x: 0.625rem;
-
-/* 10 px */
-
 $navbar-toggler-font-size: 12px;
 
 /* custom variable values:END */
