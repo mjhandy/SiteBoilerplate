@@ -5,3 +5,4 @@
 *.css
 dist/package-lock.json
 dist/node_modules/
+src/
