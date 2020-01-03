@@ -1,11 +1,18 @@
 .mainNav {
-  width: 100vw;
-  // height: 44px;
   background-color: $black;
 }
 
-
 .navbar {
+  position: initial;
+  &-collapse{
+    @include media-breakpoint-down(lg){
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: $white;
+      width: 100%;
+    }
+  }
   &-toggler {
     color: $white;
     fill: $white;
@@ -14,13 +21,15 @@
       width: 20px;
     }
   }
-
-  
-
+  &-sub{
+    @include media-breakpoint-down(lg){
+      //display: none;
+    }
+  }
   .nav {
     &-item {
       &.dropdown {
-        >button {
+        >button {          
           border: none;
           background-color: transparent;
           color: $white;
@@ -29,12 +38,17 @@
           @include font-size(13px, 1, 400);
           letter-spacing: 1px;
           text-transform: uppercase;
-
+          @include media-breakpoint-down(lg){
+            color: $black;
+            width: 100%;
+          }
           &:hover {
             background-color: $white;
             color: $black;
           }
+
         }
+
         &.show {
           >button {
             background-color: $white;
@@ -47,7 +61,6 @@
           }
         }
       }
-
       .dropdown-menu {
         .heading {
           @include font-size(14px, 1, 700);
@@ -67,7 +80,6 @@
           }
         }
       }
-
       &.megamenu {
         position: static;
 
@@ -78,7 +90,7 @@
 
           .row {
             @include media-breakpoint-up(xl) {
-              width: 1024px;
+              min-width: 1024px;
             }
           }
         }
