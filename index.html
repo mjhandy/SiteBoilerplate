@@ -15,45 +15,82 @@
     <div class="container-fluid mainNav">
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">Navbar</a>
-        <!-- nav toggle button -->
-        <button class="navbar-toggler" type="button" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+        <!-- nav toggle button:START -->
+        <button class="navbar-toggler" type="button" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+          </svg>
         </button>
-      
-        <div class="navbar-slide show" id="navbar">
+        <!-- nav toggle button:END -->
+        <div class="navbar-slide" id="navbar">
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>          
+          </form>
           <ul class="navbar-nav m-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-              <div class="navbar-sub">
-                <div class='col-6 col-lg-3'>
-                  <p class="navbar-sub--title">Sub Nav Title</p>
-                  <ul class="navbar-sub--nav">
-                    <li><a class="nav-link" href="#">Sub Nav Link</a></li>
-                  </ul>
+            <li class="nav-item">
+              <button class="navbar-sub--toggle" data-toggle="collapse" data-target="#sectionOne" aria-expanded="false"
+                aria-controls="sectionOne">Products</button>
+              <div class="collapse navbar-sub--collapse" id='sectionOne'>
+                <div class='navbar-sub'>
+                  <div class='col-6 col-lg-4'>
+                    <p class="navbar-sub--title">Applications</p>
+                    <ul class="navbar-sub--nav">
+                      <li><a class="nav-link" href="#">Overview</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Dynamics Apps</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Dynamics Platform</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Marketplace for Enterprise Software</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Apps for Android Smartphones</a></li>
+                    </ul>
+                    <p class="navbar-sub--title">Endpoint Management</p>
+                    <ul class="navbar-sub--nav">
+                      <li><a class="nav-link" href="#">Overview</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry UEM</a></li>
+                    </ul>
+                    <p class="navbar-sub--title">Identity & Access Management</p>
+                    <ul class="navbar-sub--nav">
+                      <li><a class="nav-link" href="#">Overview</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Intelligent Security</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry Enterprise Identity</a></li>
+                      <li><a class="nav-link" href="#">BlackBerry 2FA</a></li>
+                    </ul>                                          
+                  </div>
+                  <div class='col-6 col-lg-4'>
+                    <p class="navbar-sub--title">Sub Nav Title</p>
+                  </div>
+                  <div class='col-6 col-lg-4'>
+                    <p class="navbar-sub--title">Sub Nav Title</p>
+                  </div>
                 </div>
-                <div class='col-6 col-lg-3'>
-                  <p>Sub Nav Title</p>
-                </div>
-                <div class='col-6 col-lg-3'>
-                  <p>Sub Nav Title</p>
-                </div>
-                <div class='col-6 col-lg-3'>
-                  <p>Sub Nav Title</p>
-                </div>
-                <div class='col-6 col-lg-3'>
-                  <p>Sub Nav Title</p>
-                </div>                 
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <button class="navbar-sub--toggle" data-toggle="collapse" data-target="#sectionTwo" aria-expanded="false"
+                aria-controls="sectionTwo">Services</button>
+              <div class='collapse navbar-sub--collapse' id='sectionTwo'>
+                <div class="navbar-sub ">
+                  <div class='col-6 col-lg-3'>
+                    <p class="navbar-sub--title">Sub Nav Title</p>
+                    <ul class="navbar-sub--nav">
+                      <li><a class="nav-link" href="#">Sub Nav Link</a></li>
+                    </ul>
+                  </div>
+                  <div class='col-6 col-lg-3'>
+                    <p>Sub Nav Title</p>
+                  </div>
+                  <div class='col-6 col-lg-3'>
+                    <p>Sub Nav Title</p>
+                  </div>
+                  <div class='col-6 col-lg-3'>
+                    <p>Sub Nav Title</p>
+                  </div>
+                  <div class='col-6 col-lg-3'>
+                    <p>Sub Nav Title</p>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
 
@@ -80,10 +117,14 @@
   <!-- Load JQuery -->
   <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
   <!-- load Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
   <!-- custom JS -->
   <script src="/src/js/main.js"></script>

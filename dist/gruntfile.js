@@ -93,8 +93,10 @@ module.exports = function (grunt) {
           mangle: false,
           beautify: true,
           comments: 'all',
+          sourceMap: true,
           quoteStyle: 1,
-          banner: '// <%= pkg.name %> ' + ': Dev Complied Date: <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %> '
+          banner: '// <%= pkg.name %> ' + ': Dev Complied Date: <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %> ',
+          footer: ' // EOF'
         },
         src: [
           '<%= info.bootstrap%>/dist/js/bootstrap.bundle.min.js',
