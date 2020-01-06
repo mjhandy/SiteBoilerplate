@@ -1,100 +1,55 @@
-.mainNav {
+#mainNav {
   background-color: $black;
-}
-
-.navbar {
-  position: initial;
-  &-collapse{
+  height: 50px;
+  .logo{
+    color: $white;
+  }
+  .mainNav{
     @include media-breakpoint-down(lg){
       position: absolute;
-      top: 35px;
+      top: 50px;
       left: 0;
-      background-color: $white;
       width: 100%;
+      background-color: red;
+      z-index: 10;
     }
-  }
-  &-toggler {
-    color: $white;
-    fill: $white;
-
-    svg {
-      width: 20px;
+    ul{
+      @include media-breakpoint-down(lg){
+        width: 100%;
+        flex-direction: column;
+      }
     }
-  }
-  &-sub{
-    @include media-breakpoint-down(lg){
-      //display: none;
-    }
-  }
-  .nav {
-    &-item {
-      &.dropdown {
-        >button {          
-          border: none;
-          background-color: transparent;
-          color: $white;
-          padding: 20px 25px;
-          border-radius: 0;
-          @include font-size(13px, 1, 400);
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          @include media-breakpoint-down(lg){
-            color: $black;
-            width: 100%;
+    .tier{
+      &-1{
+        > a{
+          color: $black;
+          display: block;
+          padding: 20px 15px;
+          transition: all 500ms ease-in-out;
+          @include media-breakpoint-up(lg){
+            padding: 20px 30px;
+            color: $white;
           }
-          &:hover {
+          &:hover,
+          &:focus{
+            text-decoration: none;
             background-color: $white;
             color: $black;
-          }
-
-        }
-
-        &.show {
-          >button {
-            background-color: $white;
-            color: $black;
-
-            &:hover {
-              background-color: $white;
-              color: $black;
-            }
           }
         }
       }
-      .dropdown-menu {
-        .heading {
-          @include font-size(14px, 1, 700);
-          margin-top: 30px;
-          border-bottom: 1px solid $lightGrey;
-          padding-bottom: 15px;
-          margin-bottom: 15px;
-        }
-
-        .nav-link {
-          @include font-size(13px, 1.35, 300);
-          margin-top: 10px;
+      &-2{
+        a{
           color: $black;
-
-          &:hover {
+          &:hover{
+            text-decoration: none;
             color: $blue;
           }
         }
       }
-      &.megamenu {
-        position: static;
-
-        .dropdown-menu {
-          background: none;
-          border: none;
-          width: 100%;
-
-          .row {
-            @include media-breakpoint-up(xl) {
-              min-width: 1024px;
-            }
-          }
-        }
-      }
+    }
+    &-sub{
+      position: relative;      
     }
   }
 }

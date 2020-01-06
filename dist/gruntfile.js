@@ -82,8 +82,9 @@ module.exports = function (grunt) {
         },
         src: [
           '<%= info.bootstrap%>/dist/js/bootstrap.bundle.min.js',
+          '<%= info.scripts %>/global.js',
           '<%= info.components %>/**/*.js',
-          '<%= info.scripts %>/global.js'
+          
         ],
         dest: '<%= info.src %>/js/main.js'
       },
@@ -97,8 +98,8 @@ module.exports = function (grunt) {
         },
         src: [
           '<%= info.bootstrap%>/dist/js/bootstrap.bundle.min.js',
+          '<%= info.scripts %>/global.js',
           '<%= info.components %>/**/*.js',
-          '<%= info.scripts %>/global.js'
         ],
         dest: '<%= info.src %>/js/main.js'
       }
