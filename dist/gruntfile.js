@@ -75,7 +75,7 @@ module.exports = function (grunt) {
           compress: {
             drop_console: true
           },
-          comments: 'false',
+          comments: false,
           quoteStyle: 1,
           banner: '// <%= pkg.name %> ' + ': Prod Complied Date: <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %> ',
           footer: '\n // EOF'
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
         options: {
           mangle: false,
           beautify: true,
-          comments: true,
+          comments: 'all',
           quoteStyle: 1,
           banner: '// <%= pkg.name %> ' + ': Dev Complied Date: <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %> '
         },
@@ -106,25 +106,26 @@ module.exports = function (grunt) {
     },
     // watch files
     watch: {
+      options: { nospawn: true },
       cssComb: {
         files: ['<%= info.components %>/**/**.scss', 'scss/**.scss'],
-        tasks: ['csscomb']
+        tasks: ['csscomb:dev']
       },
       sass: {
         files: ['<%= info.components %>/**/**.scss', 'scss/**.scss'],
         tasks: ['sass:dev']
       },
       jshint: {
-        files: ['<%= info.components %>/**/*.js, <%= info.scripts %>/global.js'],
-        taskas: ['jshint']
+        files: ['<%= info.components %>/**/*.js', '<%= info.scripts %>/global.js'],
+        tasks: ['jshint']
       },
       jsbeautifier: {
-        files: ['<%= info.components %>/**/*.js, <%= info.scripts %>/global.js'],
-        taskas: ['jsbeautifier']
+        files: ['<%= info.components %>/**/*.js', '<%= info.scripts %>/global.js'],
+        tasks: ['jsbeautifier']
       },
       uglify: {
-        files: ['<%= info.components %>/**/*.js, <%= info.scripts %>/global.js'],
-        taskas: ['uglify:dev']
+        files: ['<%= info.components %>/**/*.js', '<%= info.scripts %>/global.js'],
+        tasks: ['uglify:dev']
       }
     }
 

@@ -1,8 +1,7 @@
 {
   "exclude": [
       ".git/**",
-      "node_modules/**",
-      "shared/**"      
+      "node_modules/**"
   ],
   "remove-empty-rulesets": true,
   "always-semicolon": true,

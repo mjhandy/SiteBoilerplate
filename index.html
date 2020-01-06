@@ -12,25 +12,52 @@
 
 <body>
   <header>
-    <div class="container-fluid d-flex align-items-center" id="mainNav">
-      <a href='/' class='logo d-block'>Site Logo</a>
-      <nav class='mainNav d-flex align-self-xl-center'>
-        <ul class="list-unstyled d-flex m-0">
-          <li class='tier-1'>
-            <a href='#'>Mega Menu One</a>
-            <div class='mainNav-sub'>
-              <div class='col-12 col-lg-3'>
-                <p class='heading m-0 font-weight-bold'>Subnav Heading</p>
-                <ul class='list-unstyled'>
-                  <li class='tier-2'><a href='#'>Subnav Item</a></li>
-                </ul>
+    <div class="container-fluid mainNav">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <!-- nav toggle button -->
+        <button class="navbar-toggler" type="button" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+        </button>
+      
+        <div class="navbar-slide show" id="navbar">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>          
+          <ul class="navbar-nav m-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+              <div class="navbar-sub">
+                <div class='col-6 col-lg-3'>
+                  <p class="navbar-sub--title">Sub Nav Title</p>
+                  <ul class="navbar-sub--nav">
+                    <li><a class="nav-link" href="#">Sub Nav Link</a></li>
+                  </ul>
+                </div>
+                <div class='col-6 col-lg-3'>
+                  <p>Sub Nav Title</p>
+                </div>
+                <div class='col-6 col-lg-3'>
+                  <p>Sub Nav Title</p>
+                </div>
+                <div class='col-6 col-lg-3'>
+                  <p>Sub Nav Title</p>
+                </div>
+                <div class='col-6 col-lg-3'>
+                  <p>Sub Nav Title</p>
+                </div>                 
               </div>
-              <div class='col-12 col-lg-3'></div>
-              <div class='col-12 col-lg-3'></div>
-            </div>
-          </li>
-          <li class='tier-1'><a href='#'>Mega Menu Two</a></li class='tier-1'>
-        </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+
+        </div>
       </nav>
     </div>
     <div class="container">
@@ -45,7 +72,7 @@
             <h2>Basic Page</h2>
           </div>
         </div>
-      </div>      
+      </div>
     </section>
   </main>
   <footer></footer>
@@ -54,8 +81,12 @@
   <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
   <!-- load Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- custom JS -->
+  <script src="/src/js/main.js"></script>
 </body>
 
 </html>

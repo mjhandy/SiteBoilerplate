@@ -1,55 +1,61 @@
-#mainNav {
-  background-color: $black;
-  height: 50px;
-  .logo{
-    color: $white;
-  }
-  .mainNav{
-    @include media-breakpoint-down(lg){
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      background-color: red;
-      z-index: 10;
-    }
-    ul{
-      @include media-breakpoint-down(lg){
-        width: 100%;
-        flex-direction: column;
+.mainNav {
+  height : 35px;
+  padding : 0;
+
+  background-color : $black;
+  .navbar {
+    padding : 0 15px;
+    &-toggler {
+      padding : 0;
+
+      fill : $white;
+      svg {
+        width : 20px;
       }
     }
-    .tier{
-      &-1{
-        > a{
-          color: $black;
-          display: block;
-          padding: 20px 15px;
-          transition: all 500ms ease-in-out;
-          @include media-breakpoint-up(lg){
-            padding: 20px 30px;
-            color: $white;
-          }
-          &:hover,
-          &:focus{
-            text-decoration: none;
-            background-color: $white;
-            color: $black;
-          }
-        }
-      }
-      &-2{
-        a{
-          color: $black;
-          &:hover{
-            text-decoration: none;
-            color: $blue;
-          }
-        }
+    &-slide {
+      position : absolute;
+      z-index : -1;
+      top : 35px;
+      right : 0;
+
+      display : flex;
+      flex-direction : column;
+
+      width : 95%;
+      padding : 10px 15px;
+
+      transition : all 500ms ease-in-out;
+
+      opacity : 0;
+      background-color : $white;
+      &.show {
+        z-index : 1;
+
+        opacity : 0.99;
       }
     }
-    &-sub{
-      position: relative;      
+    &-sub {
+      display : flex;
+      flex-direction : row;
+
+      width : 100%;
+
+      flex-wrap : wrap;
+      &--title {
+        margin-bottom : 5pxs;
+        padding-bottom : 5px;
+
+        border-bottom : 1px solid black;
+
+        @include font-size(13px, 1, 300);
+      }
+      &--nav {
+        margin : 0;
+        padding : 0;
+
+        list-style : none;
+      }
     }
   }
 }
