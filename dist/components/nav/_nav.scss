@@ -14,10 +14,7 @@
       display : block;
 
       width : 170px;
-      margin-right : 45px; // add spacing between the logo and the nav
-      margin-left : -5px; // this will pull the logo right to the edge of the container
-
-      fill : $white;
+      margin-right : 45px; // add spacing between the logo and the nav  margin-left : -5px; // this will pull the logo right to the edge of the container  fill : $white;
     }
     // mobile burger menu
     &-toggler {
@@ -44,9 +41,7 @@
       transition : all 500ms ease-in-out;
 
       opacity : 0;
-      background-color : $white;
-
-      @include media-breakpoint-up(lg) {
+      background-color : $white;@include media-breakpoint-up(lg) {
         position : initial;
         z-index : initial;
 
@@ -58,6 +53,7 @@
         opacity : 1;
         background-color : transparent;
       }
+
       &.show {
         z-index : 1;
 
@@ -78,9 +74,7 @@
         margin-bottom : 10px;
         padding-bottom : 15px;
 
-        border-bottom : 1px solid grey;
-
-        @include font-size(14px, 1, 700);
+        border-bottom : 1px solid grey;@include font-size(14px, 1, 700);
       }
       // man nav buttons
       &--toggle {
@@ -89,14 +83,10 @@
         padding : 30px 15px;
 
         letter-spacing : 1px;
-        text-transform : uppercase;
-
-        @include font-size(18px, 1, 400);
-        @include media-breakpoint-up(lg) {
+        text-transform : uppercase;@include font-size(18px, 1, 400);@include media-breakpoint-up(lg) {
           width : initial;
-          padding : 18px 25px;
+          padding : 18px 25px;@include font-size(13px, 1, 400);
 
-          @include font-size(13px, 1, 400);
           &:hover,
           &[aria-expanded=true] {
             color : $black;
@@ -104,6 +94,7 @@
             background : $white;
           }
         }
+
         &[aria-expanded=true] {
            + .collapse {
             display : block;
@@ -112,9 +103,7 @@
       }
       // section drop down 
       &--collapse {
-        display : none;
-
-        @include media-breakpoint-up(lg) {
+        display : none;@include media-breakpoint-up(lg) {
           position : absolute;
           z-index : 1;
           top : 50px;
@@ -125,6 +114,7 @@
 
           background-color : $white;
         }
+
         &.show {
           display : block;
         }
@@ -143,17 +133,13 @@
     &-item {
       button {
         border : 0;
-        background : transparent;
-
-        @include media-breakpoint-up(lg) {
+        background : transparent;@include media-breakpoint-up(lg) {
           color : $white;
         }
       }
     }
     &-link {
-      color : $black;
-
-      @include font-size(13px, 1.35, 400);
+      color : $black;@include font-size(13px, 1.35, 400);
 
       &:hover {
         color : $blue;
