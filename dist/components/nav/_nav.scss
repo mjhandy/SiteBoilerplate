@@ -1,148 +1,170 @@
 .mainNav {
-  position : absolute;
+  position: absolute;
 
-  padding : 0;
+  padding: 0;
 
-  background-color : rgba($black, 0.85);
+  background-color: rgba($black, 0.85);
+
   .navbar {
-    height : 50px;
-    padding : 0 15px;
+    height: 50px;
+    padding: 0 15px;
 
 
     // logo
     &-logo {
-      display : block;
+      display: block;
 
-      width : 170px;
-      margin-right : 45px; // add spacing between the logo and the nav  margin-left : -5px; // this will pull the logo right to the edge of the container  fill : $white;
+      width: 170px;
+      margin-right: 45px; // add spacing between the logo and the nav  margin-left : -5px; // this will pull the logo right to the edge of the container  fill : $white;
     }
+
     // mobile burger menu
     &-toggler {
-      padding : 0;
+      padding: 0;
 
-      fill : $white;
+      fill: $white;
+
       svg {
-        width : 30px;
+        width: 30px;
       }
     }
+
     // nav container, including buttons
     &-container {
-      position : absolute;
-      z-index : -1;
-      top : 50px;
-      right : 0;
+      position: absolute;
+      z-index: -1;
+      top: 50px;
+      right: 0;
 
-      display : flex;
-      flex-direction : column;
+      display: flex;
+      flex-direction: column;
 
-      width : 100%;
-      padding : 10px 15px;
+      width: 100%;
+      padding: 10px 15px;
 
-      transition : all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
 
-      opacity : 0;
-      background-color : $white;@include media-breakpoint-up(lg) {
-        position : initial;
-        z-index : initial;
+      opacity: 0;
+      background-color: $white;
 
-        flex-direction : row;
+      @include media-breakpoint-up(lg) {
+        position: initial;
+        z-index: initial;
 
-        width : initial;
-        padding : 0;
+        flex-direction: row;
 
-        opacity : 1;
-        background-color : transparent;
+        width: initial;
+        padding: 0;
+
+        opacity: 1;
+        background-color: transparent;
       }
 
       &.show {
-        z-index : 1;
+        z-index: 1;
 
-        opacity : 1;
+        opacity: 1;
       }
     }
+
     // nav sub sections
     &-sub {
-      display : flex;
-      flex-direction : row;
+      display: flex;
+      flex-direction: row;
 
-      width : 100%;
+      width: 100%;
 
-      flex-wrap : wrap;
+      flex-wrap: wrap;
 
       // section titles
       &--title {
-        margin-bottom : 10px;
-        padding-bottom : 15px;
+        margin-bottom: 10px;
+        padding-bottom: 15px;
 
-        border-bottom : 1px solid grey;@include font-size(14px, 1, 700);
+        border-bottom: 1px solid grey;
+        @include font-size(14px, 1, 700);
       }
+
       // man nav buttons
       &--toggle {
-        width : 100%;
-        height : 50px;
-        padding : 30px 15px;
+        width: 100%;
+        height: 50px;
+        padding: 30px 15px;
 
-        letter-spacing : 1px;
-        text-transform : uppercase;@include font-size(18px, 1, 400);@include media-breakpoint-up(lg) {
-          width : initial;
-          padding : 18px 25px;@include font-size(13px, 1, 400);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        @include font-size(18px, 1, 400);
+
+        @include media-breakpoint-up(lg) {
+          width: initial;
+          padding: 18px 25px;
+          @include font-size(13px, 1, 400);
 
           &:hover,
           &[aria-expanded=true] {
-            color : $black;
-            outline : none;
-            background : $white;
+            color: $black;
+            outline: none;
+            background: $white;
           }
         }
 
         &[aria-expanded=true] {
-           + .collapse {
-            display : block;
+          +.collapse {
+            display: block;
           }
         }
       }
+
       // section drop down 
       &--collapse {
-        display : none;@include media-breakpoint-up(lg) {
-          position : absolute;
-          z-index : 1;
-          top : 50px;
-          left : 50px;
+        display: none;
 
-          width : 80%;
-          padding : 30px 30px 0 30px;
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          z-index: 1;
+          top: 50px;
+          left: 50px;
 
-          background-color : $white;
+          width: 80%;
+          padding: 30px 30px 0 30px;
+
+          background-color: $white;
         }
 
         &.show {
-          display : block;
+          display: block;
         }
       }
+
       // sub nav link holder
       &--nav {
-        margin : 0 0 30px 0;
-        padding : 0;
+        margin: 0 0 30px 0;
+        padding: 0;
 
-        list-style : none;
+        list-style: none;
       }
     }
   }
+
   // bootstrap nav overrides
   .nav {
     &-item {
       button {
-        border : 0;
-        background : transparent;@include media-breakpoint-up(lg) {
-          color : $white;
+        border: 0;
+        background: transparent;
+
+        @include media-breakpoint-up(lg) {
+          color: $white;
         }
       }
     }
+
     &-link {
-      color : $black;@include font-size(13px, 1.35, 400);
+      color: $black;
+      @include font-size(13px, 1.35, 400);
 
       &:hover {
-        color : $blue;
+        color: $blue;
       }
     }
   }
