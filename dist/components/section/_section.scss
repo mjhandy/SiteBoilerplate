@@ -1,0 +1,48 @@
+section {
+ min-height : 25vh;
+ padding : 25px 0;
+ &.fullWidth {
+  padding : 0;
+  .container-fluid {
+   @include media-breakpoint-down(md) {
+    max-width : 720px;
+   }
+   .copy {
+    display : flex;
+
+    justify-content : flex-end;
+    align-items : center;
+    &-holder {
+     @include media-breakpoint-up(lg) {
+      width : 480px;
+      padding-right : 15px;
+      padding-left : 15px;
+     }
+     @include media-breakpoint-up(xl) {
+      width : 720px;
+      padding-right : 15px;
+     }
+    }
+   }
+  }
+  &-copyLeft {
+   .img {
+    order : 2;
+    img {
+     width : 100%;
+    }
+   }
+  }
+
+  &-copyRight {
+   .copy {
+    order : 2;
+   }
+   .img {
+    img {
+     width : 100%;
+    }
+   }
+  }
+ }
+}

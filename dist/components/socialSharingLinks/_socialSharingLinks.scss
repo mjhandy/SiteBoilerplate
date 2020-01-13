@@ -1,19 +1,19 @@
 .socialSharingLinks {
-  display : flex;
-  flex-direction : row;
+ display : flex;
+ flex-direction : row;
 
-  margin : 15px 0;
-  padding : 0;
+ margin : 15px 0;
+ padding : 0;
 
-  list-style : none;
-  li {
-    display : block;
-  }
-  a {
-    display : block;
+ list-style : none;
+ li {
+  display : block;
+ }
+ a {
+  display : block;
 
-    width : 32px;
-    height : 32px;
-    margin : 2px;
-  }
+  width : 32px;
+  height : 32px;
+  margin : 2px;
+ }
 }

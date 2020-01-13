@@ -6,7 +6,7 @@
   "remove-empty-rulesets": true,
   "always-semicolon": true,
   "color-case": "lower",
-  "block-indent": "  ",
+  "block-indent": " ",
   "color-shorthand": false,
   "eof-newline": true,
   "leading-zero": true,
