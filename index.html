@@ -71,8 +71,7 @@
                        C30.9,36.5,32.2,34.4,32.2,32.5z"></path>
                 </g>
               </g>
-            </g>
-            </g>
+            </g>            
             <g>
               <path class="logo-fill" d="M252.7,36c1.7,0,3.2,1.4,3.2,3.2c0,1.9-1.5,3.2-3.2,3.2c-1.8,0-3.2-1.4-3.2-3.2C249.5,37.3,251,36,252.7,36z
             M252.7,36.5c-1.5,0-2.6,1.1-2.6,2.7c0,1.6,1.1,2.7,2.6,2.7s2.6-1.1,2.6-2.7S254.2,36.5,252.7,36.5z M252,41h-0.6v-3.7h1.4
@@ -389,9 +388,9 @@
       </div>
     </section>
     <section class='fullWidth fullWidth-copyLeft'>
-      <div class="container-fluid">
+      <div class="container">
         <div class='row'>
-          <div class='col-lg-6 p-lg-0 copy'>
+          <div class='col-lg-6 copy'>
             <div class='copy-holder'>
               <h2>Full Width 50/50 Split</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vestibulum nulla, sed rhoncus
@@ -400,16 +399,16 @@
                 turpis. Vestibulum accumsan fringilla sagittis. Maecenas.</p>
             </div>
           </div>
-          <div class='col-lg-6 p-lg-0 img'>
-            <img src="https://via.placeholder.com/960">
+          <div class='col-lg-6 img'>
+            <img src="https://via.placeholder.com/960" class="lazyload">
           </div>
         </div>
       </div>
     </section>
     <section class='fullWidth fullWidth-copyRight'>
-      <div class="container-fluid">
+      <div class="container">
         <div class='row'>
-          <div class='col-lg-6 p-lg-0 copy'>
+          <div class='col-lg-6 copy'>
             <div class='copy-holder'>
               <h2>Full Width 50/50 Split</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vestibulum nulla, sed rhoncus
@@ -418,8 +417,8 @@
                 turpis. Vestibulum accumsan fringilla sagittis. Maecenas.</p>
             </div>
           </div>
-          <div class='col-lg-6 p-lg-0 img'>
-            <img src="https://via.placeholder.com/960">
+          <div class='col-lg-6 img'>
+            <img src="https://via.placeholder.com/960" class="lazyload">
           </div>
         </div>
       </div>
@@ -436,8 +435,8 @@
               <!-- indicator -->
               <ol class="carousel-indicators">
                 <li data-target="#carouselPrototype" data-slide-to="0" class="active" data-toggle="tooltip" data-placement="top" title="Slide 1"></li>
-                <li data-target="#carouselPrototype" data-slide-to="1" data-toggle="tooltip" data-placement="top" title="Slide 2"></li>
-                <li data-target="#carouselPrototype" data-slide-to="2" data-toggle="tooltip" data-placement="top" title="Slide 3"></li>
+                <li data-target="#carouselPrototype" data-slide-to="1" data-toggle="tooltip" data-placement="top" title="Slide 2" loading="lazy"></li>
+                <li data-target="#carouselPrototype" data-slide-to="2" data-toggle="tooltip" data-placement="top" title="Slide 3" loading="lazy"></li>
               </ol>
               <!-- panels-->
               <div class='carousel-inner'>
@@ -479,7 +478,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class='fullWidth fullWidth-slider'>
       <div class='container'>
         <div class='row'>
           <div class='col-12'>
@@ -491,13 +490,13 @@
               <!-- indicator -->
               <ol class="carousel-indicators">
                 <li data-target="#carouselPrototypeThumbnail" data-slide-to="0" class="active" data-toggle="tooltip" data-placement="top" title="Slide 1">
-                  <img src='/images/carousel/slide1.jpg' class="d-block w-100" alt="First slide">
+                  <img src='/images/carousel/slide1Lazy.jpg' class="" alt="First slide">
                 </li>
                 <li data-target="#carouselPrototypeThumbnail" data-slide-to="1" data-toggle="tooltip" data-placement="top" title="Slide 2">
-                  <img src='/images/carousel/slide2.jpg' class="d-block w-100" alt="First slide">
+                  <img src='/images/carousel/slide2Lazy.jpg' class="" alt="First slide">
                 </li>
                 <li data-target="#carouselPrototypeThumbnail" data-slide-to="2" data-toggle="tooltip" data-placement="top" title="Slide 3">
-                  <img src='/images/carousel/slide3.jpg' class="d-block w-100" alt="First slide">
+                  <img src='/images/carousel/slide3Lazy.jpg' class="" alt="First slide">
                 </li>
               </ol>
               <!-- panels-->
@@ -546,14 +545,9 @@
   <!-- Load JQuery -->
   <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
   <!-- load Bootstrap JS -->
-  <script src="//code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
-  <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
   <!-- custom JS -->
   <script src="/src/js/main.js"></script>

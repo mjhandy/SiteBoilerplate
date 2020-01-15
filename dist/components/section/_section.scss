@@ -3,9 +3,12 @@ section {
  padding : 25px 0;
  &.fullWidth {
   padding : 0;
-  .container-fluid {
-   @include media-breakpoint-down(md) {
-    max-width : 720px;
+  .container {
+   @include media-breakpoint-up(lg) {
+    max-width : 100%;
+    [class^='col'] {
+     padding : 0;
+    }
    }
    .copy {
     display : flex;

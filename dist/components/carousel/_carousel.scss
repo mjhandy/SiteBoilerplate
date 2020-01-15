@@ -51,13 +51,22 @@
   .carousel-indicators {
    margin-bottom : 0;
    li {
-    width : 75px;
+    display : block;
+
+    width : 100px;
     height : auto;
 
-    opacity : 0.75;
     border : none;
+    img {
+     display : block;
 
+     width : 100%;
+    }
+    &:hover {
+     opacity : 1;
+    }
     &.active {
+     opacity : 1;
      img {
       outline : 1px solid $white;
      }

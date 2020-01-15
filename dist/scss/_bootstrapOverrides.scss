@@ -1,5 +1,10 @@
 /* custom variable values:START */
 
+// colours
+
+$blue:    #1057A2;
+$white: #fff;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
@@ -15,7 +20,7 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 $spacer: 10px;
-$spacers: () !default;
+$spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge((0: 0,
         1: ($spacer * 0.5), // 5px
@@ -27,9 +32,16 @@ $spacers: map-merge((0: 0,
     ), $spacers);
 // This variable affects the `.h-*` and `.w-*` classes.
 
-$sizes: () !default;
+$sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge((25: 25%, 33: 33%, 50: 50%, 75: 75%, 100: 100%, auto: auto), $sizes);
+$sizes: map-merge((
+    25: 25%, 
+    33: 33%, 
+    50: 50%, 
+    75: 75%, 
+    100: 100%, 
+    auto: auto), 
+$sizes);
 // Typography
 
 $font-size-base: 1rem;
@@ -62,6 +74,9 @@ $navbar-nav-link-padding-x: 0;
 $navbar-nav-link-padding-y: 0;
 $nav-link-padding-x: 0.625rem;
 $navbar-toggler-font-size: 12px;
+
+
+
 
 
 /* custom variable values:END */
