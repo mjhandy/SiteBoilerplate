@@ -3,7 +3,8 @@ $(function () {
 
   var $toggler = $('.navbar-toggler'),
     $subToggler = $('.navbar-sub--toggle'),
-    $navBar = $('#navbar');
+    $navBar = $('#navbar'),
+    $cardToggler = $('.nav-card .card-header');
 
   $toggler.on('click', function () {
     $navBar.toggleClass('show');
@@ -13,7 +14,6 @@ $(function () {
     var $this = $(this),
       $target = $this.attr('data-navtarget'),
       $ariaExpanded = $this.attr('aria-expanded');
-    console.log($target, $ariaExpanded);
 
     // hide all open sub navs
     $subToggler.attr('aria-expanded', false);
@@ -26,5 +26,13 @@ $(function () {
     }
 
 
-  })
+  });
+
+  // for mobile, open close cards
+  $cardToggler.on('click', function () {
+    console.log('clicked');
+    var $this = $(this);
+    $this.toggleClass('on');
+    $this.next('.card-body').toggleClass('show');
+  });
 });

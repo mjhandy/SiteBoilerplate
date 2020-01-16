@@ -2,7 +2,9 @@ section {
  min-height : 25vh;
  padding : 25px 0;
  &.fullWidth {
-  padding : 0;
+  @include media-breakpoint-up(lg) {
+   padding : 0;
+  }
   .container {
    @include media-breakpoint-up(lg) {
     max-width : 100%;
