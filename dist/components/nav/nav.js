@@ -4,11 +4,26 @@ $(function () {
   var $toggler = $('.navbar-toggler'),
     $subToggler = $('.navbar-sub--toggle'),
     $navBar = $('#navbar'),
-    $cardToggler = $('.nav-card .card-header');
+    $navCard = $('.nav-card'),
+    $cardToggler = $('.nav-card .card-header'),
+    $cardHeaderLink = $('.nav-card .card-header a');
 
   $toggler.on('click', function () {
     $navBar.toggleClass('show');
   });
+
+  $navCard.each(function (i, v) {
+    var $cardHeaderLink = $('.card-header a', v),
+      $cardBody = $('.card-body', v);
+    console.log(i);
+    $cardHeaderLink
+      .clone()
+      .prependTo($cardBody)
+      .addClass('first');
+
+  });
+
+
 
   $subToggler.on('click', function () {
     var $this = $(this),
@@ -33,6 +48,7 @@ $(function () {
     console.log('clicked');
     var $this = $(this);
     $this.toggleClass('on');
-    $this.next('.card-body').toggleClass('show');
+    //$this.next('.card-body').toggleClass('show');
+    $this.next('.card-body').fadeToggle('fast', 'linear');
   });
 });
