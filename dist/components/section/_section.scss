@@ -1,53 +1,53 @@
 section {
- min-height : 25vh;
- padding : 25px 0;
- &.fullWidth {
-  @include media-breakpoint-up(lg) {
-   padding : 0;
-  }
-  .container {
-   @include media-breakpoint-up(lg) {
-    max-width : 100%;
-    [class^='col'] {
-     padding : 0;
+  min-height : 25vh;
+  padding : 25px 0;
+  &.fullWidth {
+    @include media-breakpoint-up(lg) {
+      padding : 0;
     }
-   }
-   .copy {
-    display : flex;
+    .container {
+      @include media-breakpoint-up(lg) {
+        max-width : 100%;
+        [class^='col'] {
+          padding : 0;
+        }
+      }
+      .copy {
+        display : flex;
 
-    justify-content : flex-end;
-    align-items : center;
-    &-holder {
-     @include media-breakpoint-up(lg) {
-      width : 480px;
-      padding-right : 15px;
-      padding-left : 15px;
-     }
-     @include media-breakpoint-up(xl) {
-      width : 720px;
-      padding-right : 15px;
-     }
+        align-items : center;
+        justify-content : flex-end;
+        &-holder {
+          @include media-breakpoint-up(xl) {
+            width : 720px;
+            padding-right : 15px;
+          }
+          @include media-breakpoint-up(lg) {
+            width : 480px;
+            padding-right : 15px;
+            padding-left : 15px;
+          }
+        }
+      }
     }
-   }
-  }
-  &-copyLeft {
-   .img {
-    order : 2;
-    img {
-     width : 100%;
+    &-copyLeft {
+      .img {
+        order : 2;
+        img {
+          width : 100%;
+        }
+      }
     }
-   }
-  }
 
-  &-copyRight {
-   .copy {
-    order : 2;
-   }
-   .img {
-    img {
-     width : 100%;
+    &-copyRight {
+      .copy {
+        order : 2;
+      }
+      .img {
+        img {
+          width : 100%;
+        }
+      }
     }
-   }
   }
- }
 }
