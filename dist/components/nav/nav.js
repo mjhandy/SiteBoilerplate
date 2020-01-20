@@ -2,8 +2,9 @@
 $(function () {
 
   var $navToggle = $('.navbar-toggler.btn-burger'),
-    $searchToggle = $('.navbar-toggler.btn-search'),
-    $search = $('.searchBox'),
+    $searchToggle = $('.btn-search'),
+    $search = $('#searchBox'),
+    $searchField = $('input', $search),
     $subToggler = $('.navbar-sub--toggle'),
     $navBar = $('#navbar'),
     $navCard = $('.nav-card'),
@@ -17,6 +18,7 @@ $(function () {
   $searchToggle.on('click', function () {
     $search.toggleClass('show');
     $navBar.removeClass('show');
+    $searchField.focus();
   });
 
   // make each nav card's header link a link in the body
@@ -27,7 +29,6 @@ $(function () {
       .clone()
       .prependTo($cardBody)
       .addClass('first');
-
   });
 
 
