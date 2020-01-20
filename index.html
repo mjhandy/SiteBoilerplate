@@ -80,145 +80,151 @@
             </g>
           </svg>
         </a>
+
+        <!-- search toggle mobile only:START -->
+        <button class='navbar-toggler btn-search' type="button" data-target="#navbar" aria-controls="navbar"
+          aria-expanded="false" aria-label="Toggle search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+            </path>
+          </svg>
+        </button>
+        <!-- search toggle mobile only:END -->
         <!-- nav toggle button:START -->
-        <button class="navbar-toggler" type="button" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler btn-burger" type="button" data-target="#navbar" aria-controls="navbar"
+          aria-expanded="false" aria-label="Toggle navigation">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path
               d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
           </svg>
         </button>
         <!-- nav toggle button:END -->
+        <!-- nav bar -->
         <ul class="navbar-main m-0" id="navbar">
           <li class="nav-item">
             <button class="navbar-sub--toggle" data-navTarget="#Products" aria-expanded="false"
               aria-controls="Products">Products</button>
-            <div class="navbar-sub--megaMenu collapse" id='Products'>
-              <div class='navbar-sub'>
-                <div class='col-12 d-flex flex-row flex-wrap justify-content-start'>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      <a href='#'>Applications</a>
-                    </div>
-                    <div class='card-body'>
-                      <a href="#">BlackBerry Dynamics Apps</a>
-                      <a href="#">BlackBerry Dynamics Platform</a>
-                      <a href="#">BlackBerry Marketplace for Enterprise Software</a>
-                      <a href="#">BlackBerry Apps for Android Smartphones</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      <a href='#'>Endpoint Protection</a>
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">BlackBerry Dynamics Apps</a>
-                      <a class="" href="#">BlackBerry Dynamics Platform</a>
-                      <a class="" href="#">BlackBerry Marketplace for Enterprise Software</a>
-                      <a class="" href="#">BlackBerry Apps for Android Smartphones</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      <a href='#'>Emedded</a>
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Certicom Asset Management Systems</a>
-                      <a class="" href="#">QNX Real Time Opoerating Systems</a>
-                      <a class="" href="#">QNX Hypervisor</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      <a href='#'>Endpoint Management</a>
-                    </div>
-                    <div class='card-body'>
-                      <a href="#">BlackBerry UEM</a> </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      <a href='#'>Content Collaboration</a>
-                    </div>
-                    <div class='card-body'>
-                      <a href='#'>BlackBerry Workspaces</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      Alerts & Crisis Communications
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Overview</a>
-                      <a class="" href="#">BlackBerry Athoc</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      Identity & Access Management
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Overview</a>
-                      <a class="" href="#">BlackBerry Intilligent Security</a>
-                      <a class="" href="#">BlackBerry Enterprise Identity</a>
-                      <a class="" href="#">BlackBerry 2FA</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      Messaging, Voice & Text
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Overview</a>
-                      <a class="" href="#">BBM Enterprise</a>
-                      <a class="" href="#">SecuSUITE</a>
-                      <a class="" href="#">BlackBerry Spark Communications Services</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      Automotive
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Overview</a>
-                      <a class="" href="#">ONX Platform for Instrument Clusters</a>
-                      <a class="" href="#">QNX ADAS Platform</a>
-                    </div>
-                  </div>
-                  <div class='card  nav-card'>
-                    <div class='card-header'>
-                      Transportaton Asset Tracking
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">BlackBerry Radar</a>
-                    </div>
-                  </div>
-                  <div class='card nav-card'>
-                    <div class='card-header'>
-                      Devices
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Overview</a>
-                    </div>
-                  </div>
-                  <div class='card  nav-card'>
-                    <div class='card-header'>
-                      Other
-                    </div>
-                    <div class='card-body'>
-                      <a class="" href="#">Resource Center</a>
-                      <a class="" href="#">All Products</a>
-                      <a class="" href="#">BlackBerry Secure UEM & Productiy Suites</a>
-                    </div>
-                  </div>
+            <div class="navbar-sub--menu megaMenu collapse" id='Products'>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Applications</a>
                 </div>
-
+                <div class='card-body'>
+                  <a href="#">BlackBerry Dynamics Apps</a>
+                  <a href="#">BlackBerry Dynamics Platform</a>
+                  <a href="#">BlackBerry Marketplace for Enterprise Software</a>
+                  <a href="#">BlackBerry Apps for Android Smartphones</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Endpoint Protection</a>
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">BlackBerry Dynamics Apps</a>
+                  <a class="" href="#">BlackBerry Dynamics Platform</a>
+                  <a class="" href="#">BlackBerry Marketplace for Enterprise Software</a>
+                  <a class="" href="#">BlackBerry Apps for Android Smartphones</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Emedded</a>
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Certicom Asset Management Systems</a>
+                  <a class="" href="#">QNX Real Time Opoerating Systems</a>
+                  <a class="" href="#">QNX Hypervisor</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Endpoint Management</a>
+                </div>
+                <div class='card-body'>
+                  <a href="#">BlackBerry UEM</a> </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Content Collaboration</a>
+                </div>
+                <div class='card-body'>
+                  <a href='#'>BlackBerry Workspaces</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  Alerts & Crisis Communications
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Overview</a>
+                  <a class="" href="#">BlackBerry Athoc</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  Identity & Access Management
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Overview</a>
+                  <a class="" href="#">BlackBerry Intilligent Security</a>
+                  <a class="" href="#">BlackBerry Enterprise Identity</a>
+                  <a class="" href="#">BlackBerry 2FA</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  Messaging, Voice & Text
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Overview</a>
+                  <a class="" href="#">BBM Enterprise</a>
+                  <a class="" href="#">SecuSUITE</a>
+                  <a class="" href="#">BlackBerry Spark Communications Services</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  Automotive
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Overview</a>
+                  <a class="" href="#">ONX Platform for Instrument Clusters</a>
+                  <a class="" href="#">QNX ADAS Platform</a>
+                </div>
+              </div>
+              <div class='card  nav-card'>
+                <div class='card-header'>
+                  Transportaton Asset Tracking
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">BlackBerry Radar</a>
+                </div>
+              </div>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  Devices
+                </div>
+                <div class='card-body'>
+                  <a class="" href="#">Overview</a>
+                </div>
+              </div>
+              <div class='card  nav-card'>
+                <div class='card-header'>
+                  Other
+                </div>
+                <div class='card-body'>
+                  <a href="#">Resource Center</a>
+                  <a href="#">All Products</a>
+                  <a href="#">BlackBerry Secure UEM & Productiy Suites</a>
+                </div>
               </div>
             </div>
           </li>
           <li class="nav-item">
             <button class="navbar-sub--toggle" data-navTarget="#sectionTwo" aria-expanded="false"
               aria-controls="sectionTwo">Services</button>
-
           </li>
           <li class="nav-item">
             <button class="navbar-sub--toggle" data-navTarget="#Industries" aria-expanded="false"
@@ -236,23 +242,6 @@
             <button class="navbar-sub--toggle" data-navTarget="#Blog" aria-expanded="false"
               aria-controls="Blog">Blog</button>
           </li>
-          <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Contact" aria-expanded="false"
-              aria-controls="Contact">Contact</button>
-            <div class='navbar-sub--megaMenu collaspe' id="Contact">
-              <div class='navbar-sub'>
-                <div class='row w-100'>
-                  <div class='col-12'>
-                    <ul class='navbar-sub--nav' id='contactNav'>
-                      <li><a href='#' class='nav-link'>Register for Updates</a></li>
-                      <li><a href='#' class='nav-link'>Contact Sales</a></li>
-                      <li><a href='#' class='nav-link'>Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
           <li class="nav-item auxNav">
             <button class='navbar-sub--toggle btn-search'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -269,13 +258,33 @@
                 </path>
               </svg>
             </button>
-            <ul class='contact collapse' id='contactNav'>
-              <li><a href='#' class='nav-link'>Register for Updates</a></li>
-              <li><a href='#' class='nav-link'>Contact Sales</a></li>
-              <li><a href='#' class='nav-link'>Contact Us</a></li>
-            </ul>
+            <div class='navbar-sub--menu standard collapse' id='contactNav'>
+              <div class='card nav-card'>
+                <div class='card-header'>
+                  <a href='#'>Contact</a>
+                </div>
+                <div class='card-body'>
+                  <a href="#">Register for Updates</a>
+                  <a href="#">Contact Sales</a>
+                  <a href="#">Contact Us</a>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
+        <!-- search box -->
+        <div class='searchBox'>
+          <form id='search-form'>
+            <input class="form-control form-control-lg" data-search-url="https://www.blackberry.com/us/en/search"
+              type="text" placeholder="Search">
+            <button type="submit"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                </path>
+              </svg>
+            </button>
+          </form>
+        </div>
       </nav>
     </div>
     <div class="container">

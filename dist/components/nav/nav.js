@@ -1,21 +1,28 @@
 // Main Nav JS
 $(function () {
 
-  var $toggler = $('.navbar-toggler'),
+  var $navToggle = $('.navbar-toggler.btn-burger'),
+    $searchToggle = $('.navbar-toggler.btn-search'),
+    $search = $('.searchBox'),
     $subToggler = $('.navbar-sub--toggle'),
     $navBar = $('#navbar'),
     $navCard = $('.nav-card'),
-    $cardToggler = $('.nav-card .card-header'),
-    $cardHeaderLink = $('.nav-card .card-header a');
+    $cardToggler = $('.nav-card .card-header');
 
-  $toggler.on('click', function () {
+  $navToggle.on('click', function () {
     $navBar.toggleClass('show');
+    $search.removeClass('show');
   });
 
+  $searchToggle.on('click', function () {
+    $search.toggleClass('show');
+    $navBar.removeClass('show');
+  });
+
+  // make each nav card's header link a link in the body
   $navCard.each(function (i, v) {
     var $cardHeaderLink = $('.card-header a', v),
       $cardBody = $('.card-body', v);
-    console.log(i);
     $cardHeaderLink
       .clone()
       .prependTo($cardBody)
@@ -27,7 +34,6 @@ $(function () {
 
   $subToggler.on('click', function () {
     var $this = $(this),
-      $target = $this.attr('data-navtarget'),
       $ariaExpanded = $this.attr('aria-expanded');
 
     // hide all open sub navs
@@ -45,10 +51,10 @@ $(function () {
 
   // for mobile, open close cards
   $cardToggler.on('click', function () {
-    console.log('clicked');
+
     var $this = $(this);
     $this.toggleClass('on');
-    //$this.next('.card-body').toggleClass('show');
+
     $this.next('.card-body').fadeToggle('fast', 'linear');
   });
 });

@@ -76,6 +76,7 @@
     }
    }
 
+   // aux nav, seach and contact
    .auxNav {
     display : flex;
     flex-direction : row;
@@ -107,6 +108,15 @@
        fill : $black;
       }
      }
+     &.btn {
+      &-search {
+       display : none;
+
+       @include media-breakpoint-up(lg) {
+        display : block;
+       }
+      }
+     }
     }
 
     svg {
@@ -114,22 +124,10 @@
 
      width : 25px;
     }
-
-    .contact {
-     list-style : none;
-
-     background-color : $white;
-
+    // standard menu postion
+    .standard {
      @include media-breakpoint-up(lg) {
-      position : absolute;
-      z-index : 1;
-      top : 50px;
-      right : 35px;
-
-      width : 220px;
-      padding : 30px;
-
-      box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
+      left : -140px;
      }
     }
    }
@@ -143,96 +141,6 @@
    width : 100%;
 
    flex-wrap : wrap;
-
-   // cards used to group nav items
-   .card {
-    width : 100%;
-    padding : 15px;
-
-    border : none;
-    border-radius : 0;
-
-    @include media-breakpoint-up(lg) {
-     width : 25%;
-    }
-    a {
-     display : block;
-
-     padding : 10px 10px 0 10px;
-
-     color : $black;
-
-     @include font-size(13px, 1.2, 400);
-
-     &:hover {
-      color : $blue;
-     }
-    }
-    &-header {
-     padding : 0;
-
-     border-bottom : 1px solid grey;
-     background-color : $white;
-
-     @include font-size(16px, 1.2, 700);
-     @include media-breakpoint-up(lg) {
-      padding : 10px;
-     }
-     a {
-      padding : 0;
-
-      @include font-size(16px, 1.2, 700);
-
-      // open close icon for mobile
-      &:after {
-       display : block;
-       float : right;
-
-       width : 15px;
-
-       content : '+';
-
-       @include media-breakpoint-up(lg) {
-        display : none;
-       }
-      }
-     }
-
-
-
-
-     &.on {
-      a {
-       &:after {
-        content : '-';
-       }
-      }
-     }
-    }
-
-    &-body {
-     display : none;
-
-     padding : 0;
-
-     @include media-breakpoint-up(lg) {
-      display : block;
-
-      opacity : 1;
-     }
-
-     &.show {
-      display : block;
-     }
-     .first {
-      @include media-breakpoint-up(lg) {
-       display : none;
-      }
-     }
-    }
-   }
-
-
 
    // main nav buttons
    &--toggle {
@@ -260,13 +168,15 @@
 
     &[aria-expanded=true] {
       + .collapse {
-      display : block;
+      display : flex;
+      flex-direction : row;
+
+      flex-wrap : wrap;
      }
     }
    }
 
-   // section drop down 
-   &--megaMenu {
+   &--menu {
     display : none;
 
     background-color : $white;
@@ -282,9 +192,145 @@
 
      box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
     }
+    // Mega Menu
+    &.megaMenu {
+     // adjust card widths
+     .card {
+      @include media-breakpoint-up(lg) {
+       width : 25%;
+      }
+     }
+    }
+    // standard menu
+    &.standard {
+     display : none;
 
-    &.show {
+     background-color : $white;
+
+     @include media-breakpoint-up(lg) {
+      position : absolute;
+      z-index : 1;
+      top : 50px;
+      left : 0;
+
+      width : 230px;
+      padding : 0;
+
+      box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
+     }
+    }
+   }
+  }
+
+  // search box{
+  .searchBox {
+   position : absolute;
+   z-index : -1;
+   top : 50px;
+   right : 0;
+   bottom : 0;
+   left : 0;
+
+   display : flex;
+
+   width : 100%;
+   height : 100vh;
+   padding : 30px 10px;
+
+   transition : all 500ms ease-in-out;
+
+   opacity : 0;
+   background-color : rgba($black, 0.85);
+   &.show {
+    z-index : 1;
+
+    opacity : 1;
+   }
+  }
+ }
+
+ // cards used to group nav items
+ .card {
+  width : 100%;
+  padding : 15px;
+
+  border : none;
+  border-radius : 0;
+  a {
+   display : block;
+
+   padding : 10px 10px 0 10px;
+
+   color : $black;
+
+   @include font-size(13px, 1.2, 400);
+
+   &:hover {
+    color : $blue;
+   }
+  }
+
+  &-header {
+   padding : 0;
+
+   border-bottom : 1px solid grey;
+   background-color : $white;
+
+   @include font-size(16px, 1.2, 700);
+   @include media-breakpoint-up(lg) {
+    padding : 10px;
+   }
+
+   a {
+    padding : 0;
+
+    @include font-size(16px, 1.2, 700);
+
+    // open close icon for mobile
+    &:after {
      display : block;
+     float : right;
+
+     width : 15px;
+
+     content : '+';
+
+     @include media-breakpoint-up(lg) {
+      display : none;
+     }
+    }
+   }
+
+
+
+
+   &.on {
+    a {
+     &:after {
+      content : '-';
+     }
+    }
+   }
+  }
+
+  &-body {
+   display : none;
+
+   padding : 0;
+
+   @include media-breakpoint-up(lg) {
+    display : block;
+
+    opacity : 1;
+   }
+
+   &.show {
+    display : block;
+   }
+
+   .first {
+    @include media-breakpoint-up(lg) {
+     display : none;
     }
    }
   }
