@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <div class="container-fluid mainNav">
+    <div class="container-fluid bbNav bbNav-main">
       <nav class="navbar navbar-expand-lg container">
         <a class="navbar-logo" href="/">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -101,11 +101,11 @@
         </button>
         <!-- nav toggle button:END -->
         <!-- nav bar -->
-        <ul class="navbar-main m-0" id="navbar">
+        <ul class="navbar-mainNav m-0" id="navbar">
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Products" aria-expanded="false"
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#Products" aria-expanded="false"
               aria-controls="Products">Products</button>
-            <div class="navbar-sub--menu megaMenu collapse" id='Products'>
+            <div class="navbar-mainNav-sub--menu megaMenu collapse" id='Products'>
               <div class='card nav-card'>
                 <div class='card-header'>
                   <a href='#'>Applications</a>
@@ -223,8 +223,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#services" aria-expanded="false" aria-controls="services">Services</button>
-            <div class='navbar-sub--menu standard collapse' id='services'>
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#services" aria-expanded="false"
+              aria-controls="services">Services</button>
+            <div class='navbar-mainNav-sub--menu standard collapse' id='services'>
               <div class='card nav-card'>
                 <div class='card-body'>
                   <a href="#">BlackBerry Dynamics Apps</a>
@@ -236,30 +237,30 @@
             </div>
           </li>
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Industries" aria-expanded="false"
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#Industries" aria-expanded="false"
               aria-controls="Industries">Industries</button>
           </li>
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Partners" aria-expanded="false"
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#Partners" aria-expanded="false"
               aria-controls="Partners">Partners</button>
           </li>
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Support" aria-expanded="false"
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#Support" aria-expanded="false"
               aria-controls="Support">Support</button>
           </li>
           <li class="nav-item">
-            <button class="navbar-sub--toggle" data-navTarget="#Blog" aria-expanded="false"
+            <button class="navbar-mainNav-sub--toggle" data-navTarget="#Blog" aria-expanded="false"
               aria-controls="Blog">Blog</button>
           </li>
           <li class="nav-item auxNav">
-            <button class='navbar-sub--toggle btn-search'>
+            <button class='navbar-mainNav-sub--toggle btn-search'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
                   d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
                 </path>
               </svg>
             </button>
-            <button class='navbar-sub--toggle btn-contact' data-navTarget="#contactNav" aria-expanded="false"
+            <button class='navbar-mainNav-sub--toggle btn-contact' data-navTarget="#contactNav" aria-expanded="false"
               aria-controls="contactNav">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                 <path
@@ -277,22 +278,51 @@
               </div>
             </div>
           </li>
-        </ul>
-
+        </ul>        
       </nav>
-        <!-- search box -->
-        <div class='searchBox' id='searchBox'>
-          <form id='search-form'>
-            <input class="form-control" data-search-url="https://www.blackberry.com/us/en/search" type="text" placeholder="Search">
-            <button type="submit"> 
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                </path>
-              </svg>
-            </button>
-          </form>
-        </div>      
+      <!-- search box -->
+      <div class='searchBox' id='searchBox'>
+        <form id='search-form'>
+          <input class="form-control" data-search-url="https://www.blackberry.com/us/en/search" type="text"
+            placeholder="Search">
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+              </path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="container-fluid bbNav-sub">
+      <nav class="navbar navbar-expand-lg container">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <button class="navbar-sub--toggle" data-navTarget="#Solutions" aria-expanded="false" aria-controls="Solutions">Solutions</button>
+            <div class='navbar-sub--menu standard collapse' id='Solutions'>
+              <div class='card nav-card'>
+                <div class='card-body'>
+                  <a href="#">BlackBerry Dynamics Apps</a>
+                  <a href="#">BlackBerry Dynamics Platform</a>
+                  <a href="#">BlackBerry Marketplace for Enterprise Software</a>
+                  <a href="#">BlackBerry Apps for Android Smartphones</a>
+                </div>
+              </div>
+            </div>
+          </li>          
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Devices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dashboards & Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News & Resources</a>
+          </li>
+
+        </ul>        
+      </nav>
     </div>
     <div class="container">
       <h1>Site Template</h1>
