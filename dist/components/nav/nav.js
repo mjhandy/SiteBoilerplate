@@ -5,7 +5,7 @@ $(function () {
     $searchToggle = $('.btn-search'),
     $search = $('#searchBox'),
     $searchField = $('input', $search),
-    $subToggler = $('.navbar-mainNav-sub--toggle, .navbar-subNav-sub--toggle'),
+    $subToggler = $('.navbar-mainNav-sub--toggle, .navbar-sub--toggle'),
     $navBar = $('#navbar'),
     $navCard = $('.nav-card'),
     $cardToggler = $('.nav-card .card-header');

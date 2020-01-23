@@ -1,3 +1,15 @@
+%toggle {
+  &[aria-expanded=true] {
+     + .collapse {
+      display : flex;
+      flex-direction : row;
+
+      flex-wrap : wrap;
+    }
+  }
+}
+
+
 // main nav
 .bbNav {
   // main nav start
@@ -149,7 +161,7 @@
             letter-spacing : 1px;
             text-transform : uppercase;
 
-            @include font-size(18px, 1, 400);
+            @extend %toggle;
             @include media-breakpoint-up(lg) {
               width : initial;
               padding : 18px 25px;
@@ -163,15 +175,7 @@
                 background : $white;
               }
             }
-
-            &[aria-expanded=true] {
-               + .collapse {
-                display : flex;
-                flex-direction : row;
-
-                flex-wrap : wrap;
-              }
-            }
+            @include font-size(18px, 1, 400);
           }
 
           &--menu {
@@ -230,6 +234,52 @@
     padding : 0;
 
     background-color : $grey;
+    .navbar {
+      &-sub {
+        &--toggle {
+          @extend %toggle;
+        }
+        &--menu {
+          @include media-breakpoint-up(lg) {
+            position : absolute;
+            top : 31px;
+
+            border-right : 1px solid $borderColour;
+            border-bottom : 1px solid $borderColour;
+            border-left : 1px solid $borderColour;
+          }
+          &.standard {
+            @include media-breakpoint-up(lg) {
+              width : 300px;
+              padding : 0;
+            }
+          }
+          // card
+          .card {
+            padding : 5px 10px;
+          }
+        }
+      }
+      .nav {
+        &-item {
+           > button,
+           > a {
+            font-size : 14px;
+
+            padding : 5px 15px;
+
+            color : $white;
+            &:hover,
+            &:focus,
+            &[aria-expanded='true'] {
+              color : $black;
+              outline : none;
+              background-color : $white;
+            }
+          }
+        }
+      }
+    }
   }
   // search box{
   .searchBox {
@@ -323,10 +373,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
-      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
+      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
