@@ -167,6 +167,7 @@
             text-transform : uppercase;
 
             @extend %toggle;
+            @include font-size(18px, 1, 400);
             @include media-breakpoint-up(lg) {
               width : initial;
               padding : 18px 25px;
@@ -180,7 +181,6 @@
                 background : $white;
               }
             }
-            @include font-size(18px, 1, 400);
           }
 
           &--menu {
@@ -388,10 +388,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
+      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
-      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;

@@ -16,6 +16,7 @@
       <div class='main'>
         <div class='container'>
           <nav class='nav'>
+            <!-- logo -->
             <a href='/' class='logo'>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" viewBox="0 0 263 58" style="fill: white;" xml:space="preserve">
@@ -83,9 +84,19 @@
                 </g>
               </svg>
             </a>
-            <ul class='nav-bar'>
-              <li>
-                <a href='#' role='button' class='tier-1 toggle' data-navtarget="#Products" aria-expanded="false" aria-controls="Products">Products</a>
+            <!-- nav toggle button:START -->
+            <button class="toggler btn-burger" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+              </svg>
+            </button>
+            <!-- nav toggle button:END -->
+            <!-- nav -->
+            <ul class='nav-bar' id='mainNav'>
+              <li class='nav-item'>
+                <a href='#' role='button' class='tier-1 toggle nav-link' data-navtarget="#Products"
+                  aria-expanded="false" aria-controls="Products">Products</a>
                 <div class='nav-sub megaMenu' id='Products'>
                   <div class='card nav-card'>
                     <div class='card-header'>
@@ -209,7 +220,7 @@
               <li><a href='#' class='tier-1 toggle' role='button'>Support</a></li>
               <li><a href='#' class='tier-1 toggle' role='button'>Blog</a></li>
               <li><a href='#' class='tier-1 toggle' role='button'>Contact</a></li>
-              <li><a href='#' class='tier-1 toggle' role='button'>Search</a></li>              
+              <li><a href='#' class='tier-1 toggle' role='button'>Search</a></li>
             </ul>
           </nav>
         </div>
@@ -217,9 +228,15 @@
       <div class='sectionNav'>
         <div class='container'>
           <nav class='nav'>
+            <!-- Mobilew section name -->
+            <!-- nav-->
             <ul class='nav-bar'>
               <li><a href='#' class='tier-1 toggle' role='button'>Solutions</a></li>
+              <li><a href='#' class='tier-1 toggle' role='button'>Devices</a></li>
+              <li><a href='#' class='tier-1 toggle' role='button'>Dashboards & Reports</a></li>
+              <li><a href='#' class='tier-1 toggle' role='button'>News & Resources</a></li>
             </ul class='nav-bar'>
+            <!-- mobile Toggle -->
           </nav>
         </div>
       </div>
