@@ -19,9 +19,11 @@
     padding : 0;
 
     background-color : rgba($black, 0.85);
+
     .navbar {
       height : 50px;
       padding : 0 15px;
+
       // logo
       &-logo {
         display : block;
@@ -29,6 +31,7 @@
         width : 170px;
         margin-right : 45px; // add spacing between the logo and the nav  margin-left : -5px; // this will pull the logo right to the edge of the container  fill : $white;
       }
+
       // mobile burger menu
       &-toggler {
         padding : 0;
@@ -39,6 +42,7 @@
           width : 30px;
         }
       }
+
       // nav container, including buttons
       &-mainNav {
         position : absolute;
@@ -143,6 +147,7 @@
             }
           }
         }
+
         // nav sub sections
         &-sub {
           display : flex;
@@ -162,7 +167,6 @@
             text-transform : uppercase;
 
             @extend %toggle;
-            @include font-size(18px, 1, 400);
             @include media-breakpoint-up(lg) {
               width : initial;
               padding : 18px 25px;
@@ -176,6 +180,7 @@
                 background : $white;
               }
             }
+            @include font-size(18px, 1, 400);
           }
 
           &--menu {
@@ -224,6 +229,7 @@
       }
     }
   }
+
   // sub nav start
   &-sub {
     position : absolute;
@@ -236,11 +242,13 @@
     padding : 0;
 
     background-color : $grey;
+
     .navbar {
       &-sub {
         &--toggle {
           @extend %toggle;
         }
+
         &--menu {
           @include media-breakpoint-up(lg) {
             position : absolute;
@@ -250,18 +258,21 @@
             border-bottom : 1px solid $borderColour;
             border-left : 1px solid $borderColour;
           }
+
           &.standard {
             @include media-breakpoint-up(lg) {
               width : 300px;
               padding : 0;
             }
           }
+
           // card
           .card {
             padding : 5px 10px;
           }
         }
       }
+
       .nav {
         &-item {
            > button,
@@ -271,6 +282,7 @@
             padding : 5px 15px;
 
             color : $white;
+
             &:hover,
             &:focus,
             &[aria-expanded='true'] {
@@ -283,6 +295,7 @@
       }
     }
   }
+
   // search box{
   .searchBox {
     position : absolute;
@@ -375,10 +388,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
-      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
+      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
