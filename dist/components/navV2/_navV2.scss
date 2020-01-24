@@ -8,13 +8,26 @@
   .nav {
     position : static;
 
+    align-items : center;
 
     button,
     [role='button'] {
       border : 0;
+      background : none;
 
-      &.icon {
-        fill : $white;
+      fill : $white;
+      &.btn {
+        &-burger {
+          position : absolute;
+          right : 0;
+
+          width : 32px;
+          height : 32px;
+
+          @include media-breakpoint-up(lg) {
+            display : none;
+          }
+        }
       }
     }
 
@@ -120,10 +133,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
-      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
+      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
@@ -198,7 +211,6 @@
 
         color : $black;
 
-        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
           padding : 18px 25px;
 
@@ -206,6 +218,7 @@
 
           @include font-size(13px, 1, 400);
         }
+        @include font-size(18px, 1, 400);
         &:hover,
         &[aria-expanded='true'] {
           color : $black;
@@ -281,10 +294,10 @@
 
       color : $white;
 
+      @include font-size(14px, 1, 400);
       @include media-breakpoint-up(lg) {
         display : none;
       }
-      @include font-size(14px, 1, 400);
     }
     .tier {
       &-1 {
@@ -292,16 +305,17 @@
 
         color : $white;
 
-        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
         }
+        @include font-size(18px, 1, 400);
         &:hover {
           background-color : darken($grey,0.3);
         }
       }
     }
     .nav {
+      display : none;
       &-bar {
         &.show {
           display : flex;
