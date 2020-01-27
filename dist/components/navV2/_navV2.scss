@@ -4,7 +4,8 @@
 
   width : 100%;
 
-  // shared items
+  /* shared items start */
+  // shared nav items
   .nav {
     position : static;
 
@@ -26,6 +27,38 @@
 
           @include media-breakpoint-up(lg) {
             display : none;
+          }
+        }
+        &-search {
+          padding : 10px;
+
+          fill : $white;
+          @include media-breakpoint-up(lg) {
+            padding : 13px;
+          }
+          svg {
+            width : 25px;
+          }
+          &:hover {
+            background-color : $white;
+
+            fill : $black;
+          }
+          &[aria-expanded='false'] {
+            .search {
+              display : block;
+            }
+            .close {
+              display : none;
+            }
+          }
+          &[aria-expanded='true'] {
+            .search {
+              display : none;
+            }
+            .close {
+              display : block;
+            }
           }
         }
       }
@@ -104,7 +137,6 @@
       }
     }
   }
-
   // cards used to group nav items
   .card {
     width : 100%;
@@ -189,9 +221,8 @@
       }
     }
   }
-
-  // sahred items end
-  // main nav
+  /* shared items end */
+  /* main nav start */
   .main {
     display : flex;
 
@@ -263,12 +294,23 @@
         &.show {
           display : flex;
         }
+        li {
+          &:nth-last-child(1) {
+            @include media-breakpoint-up(lg) {
+              position : absolute;
+              right : 50px;
+            }
+          }
+        }
       }
       &-sub {
         top : 50px;
 
         box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
         &.megaMenu {
+          left : 125px;
+
+          width : 80%;
           .card {
             @include media-breakpoint-up(lg) {
               width : 25%;
@@ -278,8 +320,8 @@
       }
     }
   }
-
-  // secondary/section based
+  /* main nav end */
+  /* secondary/section based start */
   .sectionNav {
     display : flex;
 
@@ -323,4 +365,56 @@
       }
     }
   }
+  /* secondary/section based end */
+
+  /* search field start */
+  .searchBox {
+    position : absolute;
+    z-index : -1;
+    top : 50px;
+    right : 0;
+    bottom : 0;
+    left : 0;
+
+    display : flex;
+    visibility : hidden;
+    overflow : hidden;
+
+    padding : 30px;
+
+    transition : all 250ms ease-in-out;
+
+    opacity : 0;
+    background-color : $white;
+
+    align-items : center;
+    justify-content : center;
+
+    &.show {
+      z-index : 1;
+
+      visibility : visible;
+
+      opacity : 1;
+    }
+    &-form {
+      display : flex;
+      flex-direction : row;
+
+      width : 80%;
+      ;
+      input {
+        border-radius : 0;
+      }
+      button {
+        width : 25px;
+        height : 25px;
+
+        border : 0;
+        background : transparent;
+      }
+    }
+  }
+
+  /* search field end */
 }

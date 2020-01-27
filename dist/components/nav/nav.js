@@ -1,61 +1,61 @@
-// Main Nav JS
-$(function () {
+// // Main Nav JS
+// $(function () {
 
-  var $navToggle = $('.navbar-toggler.btn-burger'),
-    $searchToggle = $('.btn-search'),
-    $search = $('#searchBox'),
-    $searchField = $('input', $search),
-    $subToggler = $('.navbar-mainNav-sub--toggle, .navbar-sub--toggle'),
-    $navBar = $('#navbar'),
-    $navCard = $('.nav-card'),
-    $cardToggler = $('.nav-card .card-header');
+//   var $navToggle = $('.navbar-toggler.btn-burger'),
+//     $searchToggle = $('.btn-search'),
+//     $search = $('#searchBox'),
+//     $searchField = $('input', $search),
+//     $subToggler = $('.navbar-mainNav-sub--toggle, .navbar-sub--toggle'),
+//     $navBar = $('#navbar'),
+//     $navCard = $('.nav-card'),
+//     $cardToggler = $('.nav-card .card-header');
 
-  $navToggle.on('click', function () {
-    $navBar.toggleClass('show');
-    $search.removeClass('show');
-  });
+//   $navToggle.on('click', function () {
+//     $navBar.toggleClass('show');
+//     $search.removeClass('show');
+//   });
 
-  $searchToggle.on('click', function () {
-    $search.toggleClass('show');
-    $navBar.removeClass('show');
-    $searchField.focus();
-  });
+//   $searchToggle.on('click', function () {
+//     $search.toggleClass('show');
+//     $navBar.removeClass('show');
+//     $searchField.focus();
+//   });
 
-  // make each nav card's header link a link in the body
-  $navCard.each(function (i, v) {
-    var $cardHeaderLink = $('.card-header a', v),
-      $cardBody = $('.card-body', v);
-    $cardHeaderLink
-      .clone()
-      .prependTo($cardBody)
-      .addClass('first');
-  });
-
-
-
-  $subToggler.on('click', function () {
-    var $this = $(this),
-      $ariaExpanded = $this.attr('aria-expanded');
-
-    // hide all open sub navs
-    $subToggler.attr('aria-expanded', false);
-    // toggled sub nav
-    if ($ariaExpanded === 'true') {
-      $this.attr('aria-expanded', false);
-    }
-    else {
-      $this.attr('aria-expanded', true);
-    }
+//   // make each nav card's header link a link in the body
+//   $navCard.each(function (i, v) {
+//     var $cardHeaderLink = $('.card-header a', v),
+//       $cardBody = $('.card-body', v);
+//     $cardHeaderLink
+//       .clone()
+//       .prependTo($cardBody)
+//       .addClass('first');
+//   });
 
 
-  });
 
-  // for mobile, open close cards
-  $cardToggler.on('click', function () {
+//   $subToggler.on('click', function () {
+//     var $this = $(this),
+//       $ariaExpanded = $this.attr('aria-expanded');
 
-    var $this = $(this);
-    $this.toggleClass('on');
+//     // hide all open sub navs
+//     $subToggler.attr('aria-expanded', false);
+//     // toggled sub nav
+//     if ($ariaExpanded === 'true') {
+//       $this.attr('aria-expanded', false);
+//     }
+//     else {
+//       $this.attr('aria-expanded', true);
+//     }
 
-    $this.next('.card-body').fadeToggle('fast', 'linear');
-  });
-});
+
+//   });
+
+//   // for mobile, open close cards
+//   $cardToggler.on('click', function () {
+
+//     var $this = $(this);
+//     $this.toggleClass('on');
+
+//     $this.next('.card-body').fadeToggle('fast', 'linear');
+//   });
+// });
