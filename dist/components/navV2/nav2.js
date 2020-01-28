@@ -28,7 +28,8 @@ $(function () {
   $searchButton.on('click', function () {
 
     console.log('search button click', docHeight);
-
+    // hide all open sub navs
+    $subToggle.attr('aria-expanded', false);
     var $this = $(this),
       $ariaExpanded = $this.attr('aria-expanded');
 

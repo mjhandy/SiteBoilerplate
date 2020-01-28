@@ -34,7 +34,7 @@
 
           fill : $white;
           @include media-breakpoint-up(lg) {
-            padding : 13px;
+            padding : 13px 0 0 0;
           }
           svg {
             width : 25px;
@@ -46,18 +46,23 @@
           }
           &[aria-expanded='false'] {
             .search {
-              display : block;
-            }
-            .close {
-              display : none;
+              &-open {
+                display : block;
+              }
+              &-close {
+                display : none;
+              }
             }
           }
           &[aria-expanded='true'] {
+            padding-top : 7px;
             .search {
-              display : none;
-            }
-            .close {
-              display : block;
+              &-open {
+                display : none;
+              }
+              &-close {
+                display : block;
+              }
             }
           }
         }
@@ -127,6 +132,9 @@
 
         width : 100%;
       }
+      &.standard {
+        width : auto;
+      }
     }
     .tier {
       &-1 {
@@ -144,6 +152,7 @@
 
     border : none;
     border-radius : 0;
+    background-color : transparent;
 
     a {
       display : block;
@@ -165,10 +174,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
+      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
-      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
@@ -242,6 +251,7 @@
 
         color : $black;
 
+        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
           padding : 18px 25px;
 
@@ -249,7 +259,6 @@
 
           @include font-size(13px, 1, 400);
         }
-        @include font-size(18px, 1, 400);
         &:hover,
         &[aria-expanded='true'] {
           color : $black;
@@ -306,6 +315,7 @@
       &-sub {
         top : 50px;
 
+        background-color : $white;
         box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
         &.megaMenu {
           left : 125px;
@@ -336,10 +346,10 @@
 
       color : $white;
 
-      @include font-size(14px, 1, 400);
       @include media-breakpoint-up(lg) {
         display : none;
       }
+      @include font-size(14px, 1, 400);
     }
     .tier {
       &-1 {
@@ -347,21 +357,36 @@
 
         color : $white;
 
+        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
         }
-        @include font-size(18px, 1, 400);
-        &:hover {
+        &:hover,
+        &[aria-expanded='true'] {
           background-color : darken($grey,0.3);
         }
       }
     }
     .nav {
       display : none;
+
+      @include media-breakpoint-up(lg) {
+        display : flex;
+      }
       &-bar {
         &.show {
           display : flex;
         }
+      }
+      &-sub {
+        &.standard {
+          background-color : darken($grey,0.3);
+        }
+      }
+    }
+    .card {
+      a {
+        color : $white;
       }
     }
   }
