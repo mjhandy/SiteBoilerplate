@@ -95,6 +95,7 @@
                + .nav-sub {
                 z-index : 1;
 
+                display : flex;
                 visibility : visible;
 
                 opacity : 1;
@@ -110,10 +111,9 @@
     }
 
     &-sub {
-      position : absolute;
       z-index : -1;
 
-      display : flex;
+      display : none;
       visibility : hidden;
       flex-direction : column;
 
@@ -122,6 +122,9 @@
       opacity : 0;
 
       @include media-breakpoint-up(lg) {
+        position : absolute;
+
+        display : flex;
         flex-direction : row;
 
         flex-wrap : wrap;
@@ -322,7 +325,10 @@
         top : 50px;
 
         background-color : $white;
-        box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
+
+        @include media-breakpoint-up(lg) {
+          box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
+        }
         &.megaMenu {
           @include media-breakpoint-up(lg) {
             left : 125px;

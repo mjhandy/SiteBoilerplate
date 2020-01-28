@@ -4,7 +4,9 @@ $(function () {
   var $subToggle = $('.nav-bar .toggle'),
     $searchButton = $('.btn-search'),
     $searchBox = $('#searchBox'),
-    docHeight = $(document).height();
+    docHeight = $(document).height(),
+    $navCard = $('.nav-card'),
+    $cardToggler = $('.nav-card .card-header');
 
   // sub nav toggle
   $subToggle.on('click', function () {
@@ -44,5 +46,24 @@ $(function () {
     //$('body').toggleClass('no-scroll');
 
     $searchBox.toggleClass('show');
+  });
+
+  // cards
+  // make each nav card's header link a link in the body
+  $navCard.each(function (i, v) {
+    var $cardHeaderLink = $('.card-header a', v),
+      $cardBody = $('.card-body', v);
+    $cardHeaderLink
+      .clone()
+      .prependTo($cardBody)
+      .addClass('first');
+  });
+  //   // for mobile, open close cards
+  $cardToggler.on('click', function () {
+
+    var $this = $(this);
+    $this.toggleClass('on');
+
+    $this.next('.card-body').fadeToggle('fast', 'linear');
   });
 });
