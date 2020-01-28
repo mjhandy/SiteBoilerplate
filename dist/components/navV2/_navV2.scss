@@ -17,6 +17,7 @@
       background : none;
 
       fill : $white;
+
       &.btn {
         &-burger {
           position : absolute;
@@ -29,6 +30,7 @@
             display : none;
           }
         }
+
         &-search {
           padding : 10px;
 
@@ -36,30 +38,37 @@
           @include media-breakpoint-up(lg) {
             padding : 13px 0 0 0;
           }
+
           svg {
             width : 25px;
           }
+
           &:hover {
             background-color : $white;
 
             fill : $black;
           }
+
           &[aria-expanded='false'] {
             .search {
               &-open {
                 display : block;
               }
+
               &-close {
                 display : none;
               }
             }
           }
+
           &[aria-expanded='true'] {
             padding-top : 7px;
+
             .search {
               &-open {
                 display : none;
               }
+
               &-close {
                 display : block;
               }
@@ -135,10 +144,12 @@
 
         width : 100%;
       }
+
       &.standard {
         width : auto;
       }
     }
+
     .tier {
       &-1 {
         &:hover,
@@ -148,6 +159,7 @@
       }
     }
   }
+
   // cards used to group nav items
   .card {
     width : 100%;
@@ -233,6 +245,7 @@
       }
     }
   }
+
   /* shared items end */
   /* main nav start */
   .main {
@@ -244,6 +257,7 @@
     background-color : rgba($black, 0.85);
 
     align-items : center;
+
     .tier {
       &-1 {
         width : 100%;
@@ -266,6 +280,7 @@
           @include font-size(13px, 1, 400);
         }
         @include font-size(18px, 1, 400);
+
         &:hover,
         &[aria-expanded='true'] {
           color : $black;
@@ -273,6 +288,7 @@
         }
       }
     }
+
     .nav {
       a {
         // site logo
@@ -289,6 +305,7 @@
           }
         }
       }
+
       &-bar {
         top : 50px;
         left : 0;
@@ -307,11 +324,13 @@
 
           background-color : transparent;
         }
+
         &.show {
           z-index : 1;
 
           display : flex;
         }
+
         li {
           &:nth-last-child(1) {
             @include media-breakpoint-up(lg) {
@@ -321,6 +340,7 @@
           }
         }
       }
+
       &-sub {
         top : 50px;
 
@@ -329,12 +349,14 @@
         @include media-breakpoint-up(lg) {
           box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
         }
+
         &.megaMenu {
           @include media-breakpoint-up(lg) {
             left : 125px;
 
             width : 80%;
           }
+
           .card {
             @include media-breakpoint-up(lg) {
               width : 25%;
@@ -344,6 +366,7 @@
       }
     }
   }
+
   /* main nav end */
   /* secondary/section based start */
   .sectionNav {
@@ -355,6 +378,7 @@
     background-color : rgba($grey, 0.85);
 
     align-items : center;
+
     .sectionName {
       margin : 0;
 
@@ -365,6 +389,7 @@
         display : none;
       }
     }
+
     .tier {
       &-1 {
         padding : 10px 20px;
@@ -375,35 +400,56 @@
           @include font-size(14px, 1, 400);
         }
         @include font-size(18px, 1, 400);
+
         &:hover,
         &[aria-expanded='true'] {
-          background-color : darken($grey,0.3);
+          background-color : darken($grey, 0.3);
         }
       }
     }
-    .nav {
-      display : none;
 
-      @include media-breakpoint-up(lg) {
-        display : flex;
-      }
+    .nav {
+      display : flex;
+
+
+
       &-bar {
-        &.show {
+        display : none;
+
+        @include media-breakpoint-up(lg) {
           display : flex;
         }
+        &.show {
+          z-index : 1;
+          top : 75px;
+          left : 0;
+
+          display : flex;
+
+          width : 100%;
+
+          background-color : grey;
+        }
       }
+
       &-sub {
         &.standard {
-          background-color : darken($grey,0.3);
+          background-color : darken($grey, 0.3);
         }
       }
     }
+
     .card {
       a {
         color : $white;
       }
+      &-body {
+        display : flex;
+        flex-direction : column;
+      }
     }
   }
+
   /* secondary/section based end */
 
   /* search field start */
@@ -436,15 +482,18 @@
 
       opacity : 1;
     }
+
     &-form {
       display : flex;
       flex-direction : row;
 
       width : 80%;
       ;
+
       input {
         border-radius : 0;
       }
+
       button {
         width : 25px;
         height : 25px;
