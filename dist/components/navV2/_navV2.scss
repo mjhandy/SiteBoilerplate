@@ -32,11 +32,9 @@
         }
 
         &-search {
-          padding : 10px;
-
           fill : $white;
           @include media-breakpoint-up(lg) {
-            padding : 13px 0 0 0;
+            padding : 13px ;
           }
 
           svg {
@@ -74,6 +72,14 @@
               }
             }
           }
+          &.mobile {
+            position : absolute;
+            right : 60px;
+
+            @include media-breakpoint-up(lg) {
+              display : none;
+            }
+          }
         }
 
         &-sectonToggle {
@@ -83,6 +89,9 @@
           width : 25px;
 
           fill : $black;
+          @include media-breakpoint-up(lg) {
+            display : none;
+          }
         }
       }
     }
