@@ -7,6 +7,7 @@ $(function () {
     docHeight = $(document).height(),
     $navCard = $('.nav-card'),
     $cardToggler = $('.nav-card .card-header'),
+    $mainNav = $('.mainNav'),
     $mainNavHeight = $('.main').height(),
     $sectionNav = $('.sectionNav');
 
@@ -68,6 +69,11 @@ $(function () {
 
     $this.next('.card-body').fadeToggle('fast', 'linear');
   });
+  // main nav needs to be sticky if there isn't a section nav
+  console.log($sectionNav.length);
+  if ($sectionNav.length === 0) {
+    $mainNav.addClass('sticky');
+  }
   // sticky section nav
   $(document).ready(function () {
     $(window).bind('scroll', function () {
