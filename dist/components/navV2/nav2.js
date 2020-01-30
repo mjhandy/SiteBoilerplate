@@ -6,7 +6,9 @@ $(function () {
     $searchBox = $('#searchBox'),
     docHeight = $(document).height(),
     $navCard = $('.nav-card'),
-    $cardToggler = $('.nav-card .card-header');
+    $cardToggler = $('.nav-card .card-header'),
+    $mainNavHeight = $('.main').height(),
+    $sectionNav = $('.sectionNav');
 
   // sub nav toggle
   $subToggle.on('click', function () {
@@ -58,12 +60,18 @@ $(function () {
       .prependTo($cardBody)
       .addClass('first');
   });
-  //   // for mobile, open close cards
+  // for mobile, open close cards
   $cardToggler.on('click', function () {
 
     var $this = $(this);
     $this.toggleClass('on');
 
     $this.next('.card-body').fadeToggle('fast', 'linear');
+  });
+  // sticky section nav
+  $(document).ready(function () {
+    $(window).bind('scroll', function () {
+      ($(window).scrollTop() > $mainNavHeight) ? $sectionNav.addClass('sticky'): $sectionNav.removeClass('sticky');
+    });
   });
 });
