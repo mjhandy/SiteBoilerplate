@@ -66,6 +66,8 @@
         }
 
         &-search {
+          transition : all 250ms ease-in-out;
+
           fill : $white;
           @include media-breakpoint-up(lg) {
             padding : 13px;
@@ -115,6 +117,11 @@
               display : none;
             }
           }
+
+          &.smaller {
+            padding-top : 5px;
+            padding-bottom : 5px;
+          }
         }
 
         &-sectonToggle {
@@ -149,7 +156,8 @@
       }
 
        > li {
-        a {
+        a,
+        button {
           display : block;
 
           &.toggle {
@@ -305,7 +313,6 @@
     display : flex;
 
     width : 100%;
-    min-height : 50px;
 
     background-color : rgba($black, 0.85);
 
@@ -316,6 +323,7 @@
         width : 100%;
         padding : 30px 0;
 
+        transition : all 250ms ease-in-out;
         text-align : center;
         letter-spacing : 1px;
         text-transform : uppercase;
@@ -323,7 +331,6 @@
         color : $black;
 
         @include media-breakpoint-up(lg) {
-          height : 50px;
           padding : 18px 25px;
 
           text-align : initial;
@@ -335,9 +342,15 @@
         @include font-size(18px, 1, 400);
 
         &:hover,
+        &:focus,
         &[aria-expanded='true'] {
           color : $black;
+          outline : none;
           background-color : $white;
+        }
+        &.smaller {
+          padding-top : 11px;
+          padding-bottom : 11px;
         }
       }
     }
@@ -348,13 +361,28 @@
         &.logo {
           display : block;
 
-          width : 150px;
           margin : 0;
 
           fill : $white;
-          @include media-breakpoint-up(lg) {
-            width : 170px;
-            margin-right : 45px;
+          svg {
+            width : 150px;
+            margin : 0;
+
+            transition : all 250ms ease-in-out;
+
+            @include media-breakpoint-up(lg) {
+              width : 170px;
+              margin-right : 45px;
+            }
+          }
+          &.smaller {
+            overflow : hidden;
+            svg {
+              @include media-breakpoint-up(lg) {
+                width : 150px;
+                margin-right : 65px;
+              }
+            }
           }
         }
       }
@@ -395,8 +423,6 @@
       }
 
       &-sub {
-        top : 50px;
-
         background-color : $white;
 
         @include media-breakpoint-up(lg) {
@@ -421,7 +447,7 @@
     // if sticky
     &.sticky {
       position : fixed;
-      z-index : 1;
+      z-index : 50;
     }
   }
 

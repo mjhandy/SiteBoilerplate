@@ -4,17 +4,15 @@ $(function () {
   var $subToggle = $('.nav-bar .toggle'),
     $searchButton = $('.btn-search'),
     $searchBox = $('#searchBox'),
-    docHeight = $(document).height(),
     $navCard = $('.nav-card'),
     $cardToggler = $('.nav-card .card-header'),
     $mainNav = $('.mainNav'),
-    $mainNavHeight = $('.main').height(),
-    $sectionNav = $('.sectionNav');
+    $mainNavHeight = $mainNav.height(),
+    $sectionNav = $('.sectionNav'),
+    $makeSmall = $('a.logo, #mainNav .tier-1, #mainNav .btn-search');
 
   // sub nav toggle
   $subToggle.on('click', function () {
-    console.log('click');
-
     var $this = $(this),
       $ariaExpanded = $this.attr('aria-expanded');
 
@@ -31,8 +29,6 @@ $(function () {
 
   // show/hide search
   $searchButton.on('click', function () {
-
-    console.log('search button click', docHeight);
     // hide all open sub navs
     $subToggle.attr('aria-expanded', false);
     var $this = $(this),
@@ -63,21 +59,23 @@ $(function () {
   });
   // for mobile, open close cards
   $cardToggler.on('click', function () {
-
     var $this = $(this);
     $this.toggleClass('on');
 
     $this.next('.card-body').fadeToggle('fast', 'linear');
   });
-  // main nav needs to be sticky if there isn't a section nav
-  console.log($sectionNav.length);
+  // main nav needs to be sticky if there isn't a section nav  
   if ($sectionNav.length === 0) {
     $mainNav.addClass('sticky');
-  }
-  // sticky section nav
-  $(document).ready(function () {
+
+    // reduce nav height on scroll
     $(window).bind('scroll', function () {
-      ($(window).scrollTop() > $mainNavHeight) ? $sectionNav.addClass('sticky'): $sectionNav.removeClass('sticky');
+      ($(window).scrollTop() > $mainNavHeight) ? $makeSmall.addClass('smaller'): $makeSmall.removeClass('smaller');
     });
+  }
+
+  $(window).bind('scroll', function () {
+    ($(window).scrollTop() > $mainNavHeight) ? $sectionNav.addClass('sticky'): $sectionNav.removeClass('sticky');
+
   });
 });
