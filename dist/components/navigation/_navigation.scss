@@ -68,10 +68,10 @@
 
         &-search {
           fill : $white;
+          @include transition();
           @include media-breakpoint-up(lg) {
             padding : 13px;
           }
-          @include transition();
 
           svg {
             width : 25px;
@@ -195,7 +195,6 @@
 
       opacity : 0;
 
-      @include transition(all, 0.5s, ease-in-out);
       @include media-breakpoint-up(lg) {
         position : absolute;
 
@@ -204,6 +203,7 @@
 
         flex-wrap : wrap;
       }
+      @include transition(all, 0.5s, ease-in-out);
 
       &.megaMenu {
         left : 0;
@@ -256,10 +256,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
+      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
-      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
@@ -335,19 +335,21 @@
 
         color : $black;
 
-        @include transition();
+        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
+          display : flex;
+
           height : 50px;
-          //padding : 18px 25px;
           padding : 0 25px;
 
           text-align : initial;
 
           color : $white;
 
+          align-items : center;
           @include font-size(13px, 1, 400);
         }
-        @include font-size(18px, 1, 400);
+        @include transition();
 
         &:hover,
         &:focus,
@@ -379,11 +381,11 @@
             width : 150px;
             margin : 0;
 
-            @include transition();
             @include media-breakpoint-up(lg) {
               width : 170px;
               margin-right : 45px;
             }
+            @include transition();
           }
 
           &.smaller {
@@ -481,10 +483,10 @@
 
       color : $white;
 
-      @include font-size(14px, 1, 400);
       @include media-breakpoint-up(lg) {
         display : none;
       }
+      @include font-size(14px, 1, 400);
     }
 
     .tier {
@@ -493,10 +495,10 @@
 
         color : $white;
 
+        @include font-size(16px, 1, 400);
         @include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
         }
-        @include font-size(16px, 1, 400);
 
         &:hover,
         &[aria-expanded='true'] {
