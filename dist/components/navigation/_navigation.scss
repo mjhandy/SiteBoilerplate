@@ -15,6 +15,7 @@
 
     width : 1px;
     height : 1px;
+
     &:focus,
     &:active {
       z-index : 999;
@@ -66,15 +67,16 @@
         }
 
         &-search {
-          transition : all 250ms ease-in-out;
-
           fill : $white;
+          @include transition();
           @include media-breakpoint-up(lg) {
             padding : 13px;
           }
 
           svg {
             width : 25px;
+
+            @include transition();
           }
 
           &:hover {
@@ -121,6 +123,10 @@
           &.smaller {
             padding-top : 5px;
             padding-bottom : 5px;
+
+            svg {
+              width : 20px;
+            }
           }
         }
 
@@ -187,8 +193,6 @@
       visibility : hidden;
       flex-direction : column;
 
-      transition : all 500ms ease-in-out;
-
       opacity : 0;
 
       @include media-breakpoint-up(lg) {
@@ -199,6 +203,7 @@
 
         flex-wrap : wrap;
       }
+      @include transition(all, 0.5s, ease-in-out);
 
       &.megaMenu {
         left : 0;
@@ -250,10 +255,10 @@
       border-bottom : 1px solid grey;
       background-color : $white;
 
+      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
-      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
@@ -323,13 +328,13 @@
         width : 100%;
         padding : 30px 0;
 
-        transition : all 250ms ease-in-out;
         text-align : center;
         letter-spacing : 1px;
         text-transform : uppercase;
 
         color : $black;
 
+        @include font-size(18px, 1, 400);
         @include media-breakpoint-up(lg) {
           padding : 18px 25px;
 
@@ -339,7 +344,7 @@
 
           @include font-size(13px, 1, 400);
         }
-        @include font-size(18px, 1, 400);
+        @include transition();
 
         &:hover,
         &:focus,
@@ -348,6 +353,7 @@
           outline : none;
           background-color : $white;
         }
+
         &.smaller {
           padding-top : 11px;
           padding-bottom : 11px;
@@ -364,19 +370,21 @@
           margin : 0;
 
           fill : $white;
+
           svg {
             width : 150px;
             margin : 0;
-
-            transition : all 250ms ease-in-out;
 
             @include media-breakpoint-up(lg) {
               width : 170px;
               margin-right : 45px;
             }
+            @include transition();
           }
+
           &.smaller {
             overflow : hidden;
+
             svg {
               @include media-breakpoint-up(lg) {
                 width : 150px;
@@ -444,6 +452,7 @@
         }
       }
     }
+
     // if sticky
     &.sticky {
       position : fixed;
@@ -468,10 +477,10 @@
 
       color : $white;
 
-      @include font-size(14px, 1, 400);
       @include media-breakpoint-up(lg) {
         display : none;
       }
+      @include font-size(14px, 1, 400);
     }
 
     .tier {
@@ -480,10 +489,10 @@
 
         color : $white;
 
+        @include font-size(16px, 1, 400);
         @include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
         }
-        @include font-size(16px, 1, 400);
 
         &:hover,
         &[aria-expanded='true'] {
@@ -494,8 +503,6 @@
 
     .nav {
       display : flex;
-
-
 
       &-bar {
         display : none;
@@ -535,6 +542,7 @@
         flex-direction : column;
       }
     }
+
     // sticky nav
     &.sticky {
       position : fixed;
@@ -560,12 +568,11 @@
 
     padding : 30px;
 
-    transition : all 250ms ease-in-out;
-
     opacity : 0;
     background-color : $white;
 
     align-items : center;
+    @include transition();
     justify-content : center;
 
     &.show {
@@ -581,8 +588,6 @@
       flex-direction : row;
 
       width : 80%;
-      ;
-
       input {
         border-radius : 0;
       }
@@ -596,6 +601,5 @@
       }
     }
   }
-
   /* search field end */
 }
