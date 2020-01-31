@@ -68,10 +68,10 @@
 
         &-search {
           fill : $white;
-          @include transition();
           @include media-breakpoint-up(lg) {
             padding : 13px;
           }
+          @include transition();
 
           svg {
             width : 25px;
@@ -195,6 +195,7 @@
 
       opacity : 0;
 
+      @include transition(all, 0.5s, ease-in-out);
       @include media-breakpoint-up(lg) {
         position : absolute;
 
@@ -203,7 +204,6 @@
 
         flex-wrap : wrap;
       }
-      @include transition(all, 0.5s, ease-in-out);
 
       &.megaMenu {
         left : 0;
@@ -251,14 +251,15 @@
 
     &-header {
       padding : 0;
+      padding : 15px 0;
 
       border-bottom : 1px solid grey;
       background-color : $white;
 
-      @include font-size(16px, 1.2, 700);
       @include media-breakpoint-up(lg) {
         padding : 10px;
       }
+      @include font-size(16px, 1.2, 700);
 
       a {
         padding : 0;
@@ -334,9 +335,11 @@
 
         color : $black;
 
-        @include font-size(18px, 1, 400);
+        @include transition();
         @include media-breakpoint-up(lg) {
-          padding : 18px 25px;
+          height : 50px;
+          //padding : 18px 25px;
+          padding : 0 25px;
 
           text-align : initial;
 
@@ -344,7 +347,7 @@
 
           @include font-size(13px, 1, 400);
         }
-        @include transition();
+        @include font-size(18px, 1, 400);
 
         &:hover,
         &:focus,
@@ -355,8 +358,9 @@
         }
 
         &.smaller {
-          padding-top : 11px;
-          padding-bottom : 11px;
+          @include media-breakpoint-up(lg) {
+            height : 35px;
+          }
         }
       }
     }
@@ -375,11 +379,11 @@
             width : 150px;
             margin : 0;
 
+            @include transition();
             @include media-breakpoint-up(lg) {
               width : 170px;
               margin-right : 45px;
             }
-            @include transition();
           }
 
           &.smaller {
@@ -387,8 +391,8 @@
 
             svg {
               @include media-breakpoint-up(lg) {
-                width : 150px;
-                margin-right : 65px;
+                width : 158px;
+                margin-right : 57px;
               }
             }
           }
@@ -477,10 +481,10 @@
 
       color : $white;
 
+      @include font-size(14px, 1, 400);
       @include media-breakpoint-up(lg) {
         display : none;
       }
-      @include font-size(14px, 1, 400);
     }
 
     .tier {
@@ -489,10 +493,10 @@
 
         color : $white;
 
-        @include font-size(16px, 1, 400);
         @include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
         }
+        @include font-size(16px, 1, 400);
 
         &:hover,
         &[aria-expanded='true'] {
