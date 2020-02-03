@@ -46,103 +46,7 @@
 
     align-items : center;
 
-    button,
-    [role='button'] {
-      border : 0;
-      background : none;
 
-      fill : $white;
-
-      &.btn {
-        &-burger {
-          position : absolute;
-          right : 15px;
-
-          width : 32px;
-          height : 32px;
-
-          @include media-breakpoint-up(lg) {
-            display : none;
-          }
-        }
-
-        &-search {
-          fill : $white;
-          @include transition();
-          @include media-breakpoint-up(lg) {
-            padding : 13px;
-          }
-
-          svg {
-            width : 25px;
-
-            @include transition();
-          }
-
-          &:hover {
-            background-color : $white;
-
-            fill : $black;
-          }
-
-          &[aria-expanded='false'] {
-            .search {
-              &-open {
-                display : block;
-              }
-
-              &-close {
-                display : none;
-              }
-            }
-          }
-
-          &[aria-expanded='true'] {
-            padding-top : 7px;
-
-            .search {
-              &-open {
-                display : none;
-              }
-
-              &-close {
-                display : block;
-              }
-            }
-          }
-
-          &.mobile {
-            position : absolute;
-            right : 60px;
-
-            @include media-breakpoint-up(lg) {
-              display : none;
-            }
-          }
-
-          &.smaller {
-            padding-top : 5px;
-            padding-bottom : 5px;
-
-            svg {
-              width : 20px;
-            }
-          }
-        }
-
-        &-sectonToggle {
-          position : absolute;
-          right : 15px;
-
-          width : 25px;
-
-          fill : $black;
-          @include media-breakpoint-up(lg) {
-            display : none;
-          }
-        }
-      }
-    }
 
     &-bar {
       position : absolute;
@@ -225,7 +129,111 @@
       }
     }
   }
+  // buttons
+  button,
+  [role='button'] {
+    border : 0;
+    background : none;
 
+    fill : $white;
+
+    &.btn {
+      // mobile menu toggle
+      &-burger {
+        position : absolute;
+        right : 15px;
+
+        width : 32px;
+        height : 32px;
+
+        @include media-breakpoint-up(lg) {
+          display : none;
+        }
+      }
+      // global search toggle
+      &-search {
+        fill : $white;
+        @include media-breakpoint-up(lg) {
+          padding : 13px;
+        }
+        //@include transition();
+
+        svg {
+          width : 25px;
+
+          //@include transition();
+        }
+
+        &:hover {
+          background-color : $white;
+
+          fill : $black;
+        }
+
+        &[aria-expanded='false'] {
+          .search {
+            &-open {
+              display : block;
+            }
+
+            &-close {
+              display : none;
+            }
+          }
+        }
+
+        &[aria-expanded='true'] {
+          padding-top : 7px;
+
+          .search {
+            &-open {
+              display : none;
+            }
+
+            &-close {
+              display : block;
+            }
+          }
+        }
+
+        &.mobile {
+          position : absolute;
+          right : 60px;
+
+          @include media-breakpoint-up(lg) {
+            display : none;
+          }
+        }
+
+        &.smaller {
+          padding-top : 5px;
+          padding-bottom : 5px;
+
+          svg {
+            width : 20px;
+          }
+        }
+      }
+      // global search submit
+      &-searchSubmit {
+        width : 40px;
+        height : initial;
+
+        fill : $black;
+      }
+      &-sectonToggle {
+        position : absolute;
+        right : 15px;
+
+        width : 25px;
+
+        fill : $black;
+        @include media-breakpoint-up(lg) {
+          display : none;
+        }
+      }
+    }
+  }
   // cards used to group nav items
   .card {
     width : 100%;
@@ -477,7 +485,6 @@
     background-color : rgba($grey, 0.85);
 
     align-items : center;
-
     .sectionName {
       margin : 0;
 
@@ -488,7 +495,6 @@
       }
       @include font-size(14px, 1, 400);
     }
-
     .tier {
       &-1 {
         padding : 10px 20px;
@@ -506,7 +512,6 @@
         }
       }
     }
-
     .nav {
       display : flex;
 
@@ -536,7 +541,6 @@
         }
       }
     }
-
     // card tweaks
     .card {
       a {
@@ -548,7 +552,6 @@
         flex-direction : column;
       }
     }
-
     // sticky nav
     &.sticky {
       position : fixed;
@@ -586,6 +589,8 @@
 
       visibility : visible;
 
+      height : 100vh;
+
       opacity : 1;
     }
 
@@ -596,14 +601,6 @@
       width : 80%;
       input {
         border-radius : 0;
-      }
-
-      button {
-        width : 25px;
-        height : 25px;
-
-        border : 0;
-        background : transparent;
       }
     }
   }

@@ -18,6 +18,9 @@ $(function () {
 
     // hide all open sub navs
     $subToggle.attr('aria-expanded', false);
+    // hide search and reset button state
+    $searchButton.attr('aria-expanded', false);
+    $searchBox.removeClass('show');
     // toggled sub nav
     if ($ariaExpanded === 'true') {
       $this.attr('aria-expanded', false);
@@ -41,14 +44,11 @@ $(function () {
     else {
       $this.attr('aria-expanded', true);
     }
-
-    //$('body').toggleClass('no-scroll');
-
     $searchBox.toggleClass('show');
   });
 
   // cards
-  // make each nav card's header link a link in the body
+  // make each nav card's header text a link in the body
   $navCard.each(function (i, v) {
     var $cardHeaderLink = $('.card-header a', v),
       $cardBody = $('.card-body', v);
@@ -76,6 +76,5 @@ $(function () {
 
   $(window).bind('scroll', function () {
     ($(window).scrollTop() > $mainNavHeight) ? $sectionNav.addClass('sticky'): $sectionNav.removeClass('sticky');
-
   });
 });
