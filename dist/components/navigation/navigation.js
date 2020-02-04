@@ -82,8 +82,7 @@ $(function () {
   });
   // close all open items 
   // close on ESC key
-  $(document).on('keydown', function (e) {
-    console.log(e);
+  $(document).on('keydown', function (e) {    
     if (e.keyCode === 27) {
       ariaReset();
     }
