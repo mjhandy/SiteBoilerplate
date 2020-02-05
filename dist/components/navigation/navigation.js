@@ -1,6 +1,5 @@
 // Main Nav JS
 $(function () {
-
   var $subToggle = $('.nav-bar .toggle'),
     $searchButton = $('.btn-search'),
     $searchBox = $('#searchBox'),
@@ -10,15 +9,12 @@ $(function () {
     $mainNavHeight = $mainNav.height(),
     $sectionNav = $('.sectionNav'),
     $makeSmall = $('a.logo, #mainNav .tier-1, #mainNav .btn-search');
-
   // sub nav toggle
   $subToggle.on('click', function () {
     var $this = $(this),
       $ariaExpanded = $this.attr('aria-expanded');
-
     // hide all open sub navs and reset aria tags
     ariaReset();
-
     // hide search and reset button state
     $searchButton.attr('aria-expanded', false);
     $searchBox.removeClass('show');
@@ -32,7 +28,6 @@ $(function () {
       $this.next().attr('aria-hidden', true);
     }
   });
-
   // show/hide search
   $searchButton.on('click', function () {
     var $this = $(this),
@@ -49,7 +44,6 @@ $(function () {
     // toggle search box
     $searchBox.toggleClass('show');
   });
-
   // cards
   // make each nav card's header text a link in the body
   $navCard.each(function (i, v) {
@@ -70,7 +64,6 @@ $(function () {
   // main nav needs to be sticky if there isn't a section nav  
   if ($sectionNav.length === 0) {
     $mainNav.addClass('sticky');
-
     // reduce nav height on scroll
     $(window).bind('scroll', function () {
       ($(window).scrollTop() > $mainNavHeight) ? $makeSmall.addClass('smaller'): $makeSmall.removeClass('smaller');
@@ -82,7 +75,7 @@ $(function () {
   });
   // close all open items 
   // close on ESC key
-  $(document).on('keydown', function (e) {    
+  $(document).on('keydown', function (e) {
     if (e.keyCode === 27) {
       ariaReset();
     }

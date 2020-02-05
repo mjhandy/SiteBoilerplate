@@ -13,26 +13,30 @@
 
     overflow : hidden;
 
-    width : 1px;
-    height : 1px;
+    width : 0;
+    height : 0;
 
     &:focus,
     &:active {
       z-index : 999;
       top : 10px;
-      left : 10%;
+      right : 0;
+      left : 0;
 
       overflow : auto;
 
-      width : 15%;
+      width : 200px;
       height : auto;
+      margin-right : auto;
+      margin-left : auto;
       padding : 5px;
 
       text-align : center;
 
-      color : #fff;
-      border : 1px solid $blue;
+      color : $white;
+      border : 2px solid $blue;
       border-radius : 5px;
+      outline : none;
       background-color : #000;
 
       @include font-size(16px, 1, 400);
@@ -45,9 +49,6 @@
     position : static;
 
     align-items : center;
-
-
-
     &-bar {
       position : absolute;
 
@@ -238,12 +239,11 @@
   // cards used to group nav items
   .card {
     width : 100%;
-    padding : 0 15px 15px 15px;
+    padding : 15px;
 
     border : none;
     border-radius : 0;
     background-color : transparent;
-
     a {
       display : block;
 
@@ -252,7 +252,6 @@
       color : $black;
 
       @include font-size(13px, 1.2, 400);
-
       &:hover,
       &:focus {
         color : $blue;
@@ -267,12 +266,10 @@
       background-color : $white;
 
       @include font-size(16px, 1.2, 700);
-
       a {
         padding : 0;
 
         @include font-size(16px, 1.2, 700);
-
         // open close icon for mobile
         &:after {
           display : block;
@@ -331,7 +328,7 @@
     display : flex;
 
     width : 100%;
-    min-height : 50px;
+    min-height : 35px;
 
     background-color : rgba($black, 0.85);
 

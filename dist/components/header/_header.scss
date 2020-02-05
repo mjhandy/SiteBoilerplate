@@ -1,0 +1,18 @@
+header {
+  background-color : rgba($grey, 0.08);
+   > .container {
+    display : flex;
+    flex-direction : row;
+
+    min-height : 50vh;
+
+    align-items : center;
+     > .row {
+      width : 100%;
+    }
+  }
+  h1,
+  h2 {
+    text-shadow : 2px 2px 5px rgba(150, 150, 150, 1);
+  }
+}
