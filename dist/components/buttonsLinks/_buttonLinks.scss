@@ -1,0 +1,49 @@
+.linkGroup {
+  display : flex;
+  flex-direction : column;
+
+  margin : 20px 0;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction : row;
+  }
+  .link {
+    position : relative;
+
+    display : inline-flex;
+
+    min-width : 64px;
+    height : 35px;
+    margin : 0 10px 0 0;
+    padding : 0 16px;
+
+    text-decoration : none;
+    letter-spacing : 1.25px;
+    text-transform : uppercase;
+
+    border-radius : 5px;
+
+    align-items : center;
+    @include font-size(14px, 1, 500);
+    @include transition(all, 0.5s, ease-in-out);
+    justify-content : center;
+    &-primary {
+      &--hollow {
+        border : 1px solid $borderColour;
+      }
+      &--solid {
+        color : $white;
+        background : $blue;
+        box-shadow : 3px 3px 11px 0 rgba(50, 50, 50, 0.75);
+        &:hover {
+          background : darken($blue, 10);
+        }
+      }
+    }
+    &-secondary {
+      &:hover {
+        text-decoration : underline;
+      }
+    }
+  }
+}
