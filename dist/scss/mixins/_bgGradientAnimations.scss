@@ -1,0 +1,25 @@
+@mixin gradientAnimation($startColour, $stopColour, $direction, $speed: 2s, $count: 5) {
+  background: linear-gradient(to $direction, $startColour 0%, $stopColour 100%);
+  background-size: 200% 200%;
+  
+  &:hover{
+    animation: gradient $speed ease $count;
+  }
+
+
+  @keyframes gradient {
+    0% {
+      background-position: 10% 0%
+    }
+  
+    50% {
+      background-position: 91% 100%
+    }
+  
+    100% {
+      background-position: 10% 0%
+    }
+  }
+}
+
+
