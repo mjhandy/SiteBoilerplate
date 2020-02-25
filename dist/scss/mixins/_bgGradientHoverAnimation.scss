@@ -1,0 +1,47 @@
+/*
+
+This will give the element a gradient background that will animate on hover. You can
+select the start and stop colours, as well as animation speed and how many times it
+animates
+
+
+example usage: @include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 2);
+
+
+
+*/
+
+
+@mixin gradientAnimation($startColour, $stopColour, $direction, $speed: 2s, $count: 5) {
+  background: linear-gradient(to $direction, $startColour 0%, $stopColour 100%);
+  background-size: 200% 200%;
+  
+  &:hover{
+    animation: gradient $speed ease $count;
+  }
+
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 0
+    }
+
+    25%{
+      background-position: 0 50%;
+    }
+  
+    50% {
+      background-position: 0 100%
+    }
+
+    75%{
+      background-position: 0 75%;
+    }
+  
+    100% {
+      background-position: 0 0
+    }
+  }
+}
+
+
