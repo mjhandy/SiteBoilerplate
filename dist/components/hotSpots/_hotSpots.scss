@@ -1,0 +1,89 @@
+.hotSpots {
+  position : relative;
+  &-img {
+    position : relative;
+    z-index : 1;
+  }
+  &-spot {
+    position : absolute;
+    z-index : 5;
+
+    width : 32px;
+    height : 32px;
+
+    cursor : pointer;
+
+    border-radius : 50%;
+    background-color : $blue;
+    .circle {
+      position : absolute;
+
+      width : 32px;
+      height : 32px;
+
+      animation : pulsate 3s ease-out infinite;
+
+      opacity : 0;
+      border : 1px solid $blue;
+      border-radius : 50%;
+    }
+    &[hsID='01'] {
+      top : 50px;
+      left : 100px;
+    }
+    &[hsID='02'] {
+      top : 60px;
+      left : 200px;
+    }
+    &[hsID='03'] {
+      top : 90px;
+      left : 350px;
+    }
+  }
+  &-card {
+    position : absolute;
+    z-index : 10;
+
+    visibility : hidden;
+
+    width : 225px;
+
+    transition : all 1s ease-in-out;
+
+    opacity : 0;
+    border : none;
+    border-radius : 2px;
+    background-color : green;
+    &.show {
+      visibility : visible;
+
+      opacity : 1;
+    }
+    &[hsID='01'] {
+      top : 50px;
+      left : 150px;
+    }
+    &[hsID='02'] {
+      top : 60px;
+      left : 250px;
+    }
+    &[hsID='03'] {
+      top : 90px;
+      left : 400px;
+    }
+  }
+}
+
+@keyframes
+pulsate {
+  0% {
+    transform : scale(1);
+
+    opacity : 0.8;
+  }
+  45% {
+    transform : scale(1.75);
+
+    opacity : 0;
+  }
+}
