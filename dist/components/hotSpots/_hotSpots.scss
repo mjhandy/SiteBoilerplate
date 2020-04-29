@@ -4,6 +4,12 @@
   &-img {
     position : relative;
     z-index : 1;
+
+    margin-bottom : 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom : 0;
+    }
   }
   &-spot {
     position : absolute;
@@ -15,7 +21,9 @@
     height : 32px;
 
     cursor : pointer;
+    transition : all 1s ease-in-out;
 
+    opacity : 0.8;
     border-radius : 50%;
     background-color : $blue;
 
@@ -33,6 +41,9 @@
       opacity : 0;
       border : 1px solid $blue;
       border-radius : 50%;
+    }
+    &:hover {
+      opacity : 1;
     }
   }
   &-card {
@@ -85,6 +96,9 @@
     }
     &-body {
       padding : 5px;
+      p:last-of-type {
+        margin-bottom : 0;
+      }
       &.collapse {
         @include media-breakpoint-up(md) {
           display : flex;
