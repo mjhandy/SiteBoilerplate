@@ -1,5 +1,6 @@
 .hotSpots {
   position : relative;
+
   &-img {
     position : relative;
     z-index : 1;
@@ -8,6 +9,8 @@
     position : absolute;
     z-index : 5;
 
+    display : none;
+
     width : 32px;
     height : 32px;
 
@@ -15,6 +18,10 @@
 
     border-radius : 50%;
     background-color : $blue;
+
+    @include media-breakpoint-up(md) {
+      display : block;
+    }
     .circle {
       position : absolute;
 
@@ -39,37 +46,61 @@
       top : 90px;
       left : 350px;
     }
+    &[hsID='04'] {
+      top : 400px;
+      left : 350px;
+    }
   }
   &-card {
-    position : absolute;
-    z-index : 10;
+    @include media-breakpoint-up(md) {
+      position : absolute;
+      z-index : 10;
 
-    visibility : hidden;
+      visibility : hidden;
 
-    width : 225px;
+      width : 225px;
+      margin : 0;
 
-    transition : all 1s ease-in-out;
+      transition : all 1s ease-in-out;
 
-    opacity : 0;
-    border : none;
-    border-radius : 2px;
-    background-color : green;
+      opacity : 0;
+      border : none;
+      border-radius : 2px;
+      background-color : $white;
+
+      @include box_shadow(3,5);
+    }
+    &:first {
+      margin-top : 30px;
+    }
     &.show {
       visibility : visible;
 
       opacity : 1;
     }
-    &[hsID='01'] {
-      top : 50px;
-      left : 150px;
+  }
+  // bootstrap card overides
+  .card {
+    &-head {
+      font-weight : 700;
+
+      padding : 5px;
+
+      color : $blue;
+
+      @extend .h3;
     }
-    &[hsID='02'] {
-      top : 60px;
-      left : 250px;
+    &-body {
+      padding : 5px;
+      &.collapse {
+        @include media-breakpoint-up(md) {
+          display : flex;
+        }
+      }
     }
-    &[hsID='03'] {
-      top : 90px;
-      left : 400px;
+    &-footer {
+      border : none;
+      background-color : transparent;
     }
   }
 }
