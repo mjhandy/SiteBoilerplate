@@ -25,8 +25,7 @@ $(function () {
       if ($position.includes('top')) { // card opens to the left of the hotspot        
         $top = p.top;
       }
-      if ($position.includes('bottom')) { // card opens to the left of the hotspot
-        console.log('bottom');
+      if ($position.includes('bottom')) { // card opens to the left of the hotspot        
         $top = p.top - $cardHeight;
       }
       $('.hotSpots-card[hsID="' + $id + '"').css({
@@ -47,6 +46,15 @@ $(function () {
     $hotSpotCard
       .removeClass('show');
     // show the selected hotspot
-    $(this).next().addClass('show');
+    $(this)
+      .next()
+      .toggleClass('show');
+    // hide the active tool top
+    $(this)
+      .tooltip('hide');
+  });
+  // tool tips
+  $spot.tooltip({
+    template: '<div class="tooltip hotSpots-tooltip" role="tooltip"><div class="arrow hotSpots-tooltip--arrow"></div><div class="tooltip-inner hotSpots-tooltip--inner"></div></div>'
   });
 });

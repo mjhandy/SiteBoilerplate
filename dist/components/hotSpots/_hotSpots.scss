@@ -34,27 +34,11 @@
       border : 1px solid $blue;
       border-radius : 50%;
     }
-    &[hsID='01'] {
-      top : 50px;
-      left : 100px;
-    }
-    &[hsID='02'] {
-      top : 60px;
-      left : 200px;
-    }
-    &[hsID='03'] {
-      top : 90px;
-      left : 350px;
-    }
-    &[hsID='04'] {
-      top : 400px;
-      left : 350px;
-    }
   }
   &-card {
     @include media-breakpoint-up(md) {
       position : absolute;
-      z-index : 10;
+      z-index : 15;
 
       visibility : hidden;
 
@@ -77,6 +61,15 @@
       visibility : visible;
 
       opacity : 1;
+    }
+  }
+  // tool tip
+  &-tooltip {
+    &--arrow {
+      border-color : $blue;
+    }
+    &--inner {
+      background-color : $blue;
     }
   }
   // bootstrap card overides
