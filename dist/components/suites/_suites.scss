@@ -43,14 +43,16 @@
     }
   }
 }
+
 @mixin cardColours($style) {
   // set colour var
   $colours : null;
 
-  @if $style == full {
+  @if $style==full {
     $colours : #1472d7, #0f57a3, #093b71, #20298c, #1d2048;
   }
-  @else if $style == first {
+
+  @else if $style==first {
     $colours : #1472d7, #838d96, #464b53, #000, #000;
   }
 
@@ -62,9 +64,11 @@
         color : nth($colours, $i);
         border-color : nth($colours, $i);
       }
+
       .suites-card--body {
         border-color : nth($colours, $i);
       }
+
       .suites-card--footer {
         border-color : nth($colours, $i);
       }
@@ -92,10 +96,12 @@
     &-fullColour {
       @include cardColours(full);
     }
+
     &-first {
       @include cardColours(first);
     }
   }
+
   &-card {
     margin-bottom : 15px;
     padding : 15px;
@@ -120,6 +126,7 @@
       @include media-breakpoint-up(md) {
         min-height : 70px;
       }
+
       &:first-child {
         border-radius : 0;
       }
@@ -128,14 +135,14 @@
     &--body {
       padding : 0 15px;
 
-      border-left : 5px solid red;
+      border-left : 5px solid;
     }
 
     &--footer {
       padding : 0 15px;
 
       border : none;
-      border-left : 5px solid red;
+      border-left : 5px solid;
       background-color : transparent;
     }
   }
