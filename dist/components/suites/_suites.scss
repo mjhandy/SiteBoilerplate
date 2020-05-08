@@ -43,8 +43,16 @@
     }
   }
 }
-@mixin cardColours() {
-  $colours : #1472d7, #0f57a3, #093b71, #20298c, #1d2048;
+@mixin cardColours($style) {
+  // set colour var
+  $colours : null;
+
+  @if $style == full {
+    $colours : #1472d7, #0f57a3, #093b71, #20298c, #1d2048;
+  }
+  @else if $style == first {
+    $colours : #1472d7, #838d96, #464b53, #000, #000;
+  }
 
 
 
@@ -65,26 +73,38 @@
 }
 
 .suites {
-  @include media-breakpoint-up(md) {
-    position : relative;
+  position : relative;
 
+  @include media-breakpoint-between(sm, lg) {
+    margin-right : -15px;
+    margin-left : -15px;
+
+    flex-flow : column wrap;
+  }
+  @include media-breakpoint-up(lg) {
     flex-direction : row;
 
     margin-right : -15px;
     margin-left : -15px;
   }
-  @include cardColours();
+
+  &.theme {
+    &-fullColour {
+      @include cardColours(full);
+    }
+    &-first {
+      @include cardColours(first);
+    }
+  }
   &-card {
+    margin-bottom : 15px;
     padding : 15px;
 
     border : 0;
     border-radius : 0;
 
-    @include media-breakpoint-up(md) {
-      //flex-direction : row;
-      // margin : 0 15px;
-    }
     @include shadow(1, 3);
+
 
     &--header {
       font-size : 18px;
