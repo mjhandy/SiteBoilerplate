@@ -16,7 +16,6 @@
     height : 32px;
     margin-right : 10px;
 
-    fill : $blue;
-    @include box_shadow(3,2);
+    fill : $blue;@include box_shadow(3,2);
   }
 }

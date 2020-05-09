@@ -2,11 +2,10 @@
   display : flex;
   flex-direction : column;
 
-  margin : 20px 0;
-
-  @include media-breakpoint-up(lg) {
+  margin : 20px 0;@include media-breakpoint-up(lg) {
     flex-direction : row;
   }
+
   .link {
     position : relative;
 
@@ -23,27 +22,22 @@
 
     border-radius : 5px;
 
-    align-items : center;
-    @include media-breakpoint-up(lg) {
+    align-items : center;@include font-size(14px, 1, 500);@include transition(all, 0.5s, ease-in-out);@include media-breakpoint-up(lg) {
       margin : 0 10px 0 0;
     }
-    @include transition(all, 0.5s, ease-in-out);
-    @include font-size(14px, 1, 500);
     justify-content : center;
     &-primary {
       &--hollow {
-        border : 1px solid $borderColour;
+        border : 1px solid $borderColour;@include box_shadow(2,1);
 
-        @include box_shadow(2,1);
         &:hover {
           background-color : lighten($silver, 15);
         }
       }
       &--solid {
         color : $white;
-        background : $blue;
+        background : $blue;@include box_shadow(3,2);
 
-        @include box_shadow(3,2);
         &:hover {
           background : darken($blue, 10);
         }

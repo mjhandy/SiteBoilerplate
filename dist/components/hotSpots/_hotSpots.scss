@@ -5,9 +5,7 @@
     position : relative;
     z-index : 1;
 
-    margin-bottom : 30px;
-
-    @include media-breakpoint-up(md) {
+    margin-bottom : 30px;@include media-breakpoint-up(md) {
       margin-bottom : 0;
     }
   }
@@ -25,11 +23,10 @@
 
     opacity : 0.8;
     border-radius : 50%;
-    background-color : $blue;
-
-    @include media-breakpoint-up(md) {
+    background-color : $blue;@include media-breakpoint-up(md) {
       display : block;
     }
+
     .circle {
       position : absolute;
 
@@ -61,9 +58,7 @@
       opacity : 0;
       border : none;
       border-radius : 2px;
-      background-color : $white;
-
-      @include box_shadow(3,5);
+      background-color : $white;@include box_shadow(3,5);
     }
     &:first {
       margin-top : 30px;
@@ -90,9 +85,7 @@
 
       padding : 5px;
 
-      color : $blue;
-
-      @extend .h3;
+      color : $blue;@extend .h3;
     }
     &-body {
       padding : 5px;

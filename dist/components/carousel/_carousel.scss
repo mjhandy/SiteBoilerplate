@@ -26,9 +26,7 @@
     &-next {
       z-index : 10;
 
-      width : 30px;
-
-      @include media-breakpoint-down(sm) {
+      width : 30px;@include media-breakpoint-down(sm) {
         display : none;
       }
     }

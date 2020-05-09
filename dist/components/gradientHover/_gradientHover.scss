@@ -6,6 +6,5 @@
 
   color : $white;
 
-  align-items : center;
-  @include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 2);
+  align-items : center;@include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 2);
 }
