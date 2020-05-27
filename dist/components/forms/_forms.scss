@@ -1,0 +1,32 @@
+form {
+  display : flex;
+  flex-direction : column;
+  .form {
+    &-group {
+      display : flex;
+      flex-direction : column;
+      // set order
+      &.email {
+        order : 2;
+      }
+      &.fname {
+        order : 1;
+      }
+    }
+    &-field {
+      width : 100%;
+      padding : 10px 15px;
+
+      border : 0;
+      border-bottom : 2px solid $blue;
+
+      &:focus {
+        border : 0;
+        border-bottom : 2px solid $blue;
+        outline : none;
+        background-color : #cdcdcd;
+        box-shadow : none;
+      }
+    }
+  }
+}

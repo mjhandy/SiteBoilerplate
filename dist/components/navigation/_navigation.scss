@@ -94,14 +94,14 @@
       visibility : hidden;
       flex-direction : column;
 
-      opacity : 0;@include media-breakpoint-up(lg) {
+      opacity : 0;@include transition(all, 0.5s, ease-in-out);@include media-breakpoint-up(lg) {
         position : absolute;
 
         display : flex;
         flex-direction : row;
 
         flex-wrap : wrap;
-      }@include transition(all, 0.5s, ease-in-out);
+      }
 
       &.megaMenu {
         left : 0;
@@ -261,9 +261,9 @@
 
           height : 20px;
 
-          content : '+';@include media-breakpoint-up(lg) {
+          content : '+';@include font-size(30px, 0.5, 400);@include media-breakpoint-up(lg) {
             display : none;
-          }@include font-size(30px, 0.5, 400);
+          }
         }
         &:hover,
         &:focus {
@@ -321,7 +321,7 @@
         letter-spacing : 1px;
         text-transform : uppercase;
 
-        color : $black;@include font-size(18px, 1, 400);@include media-breakpoint-up(lg) {
+        color : $black;@include transition();@include media-breakpoint-up(lg) {
           display : flex;
 
           height : 50px;
@@ -332,7 +332,7 @@
           color : $white;
 
           align-items : center;@include font-size(13px, 1, 400);
-        }@include transition();
+        }@include font-size(18px, 1, 400);
 
         &:hover,
         &:focus,
@@ -362,10 +362,10 @@
 
           svg {
             width : 150px;
-            margin : 0;@include media-breakpoint-up(lg) {
+            margin : 0;@include transition();@include media-breakpoint-up(lg) {
               width : 170px;
               margin-right : 45px;
-            }@include transition();
+            }
           }
 
           &.smaller {
@@ -456,17 +456,17 @@
     .sectionName {
       margin : 0;
 
-      color : $white;@include media-breakpoint-up(lg) {
+      color : $white;@include font-size(14px, 1, 400);@include media-breakpoint-up(lg) {
         display : none;
-      }@include font-size(14px, 1, 400);
+      }
     }
     .tier {
       &-1 {
         padding : 10px 20px;
 
-        color : $white;@include font-size(16px, 1, 400);@include media-breakpoint-up(lg) {
+        color : $white;@include media-breakpoint-up(lg) {
           @include font-size(14px, 1, 400);
-        }
+        }@include font-size(16px, 1, 400);
 
         &:hover,
         &[aria-expanded='true'] {
