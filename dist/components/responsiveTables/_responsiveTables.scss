@@ -1,0 +1,24 @@
+.responsive-table {
+  display : flex;
+
+  flex-flow : column;
+  ul {
+    display : flex;
+
+    margin : 0;
+    padding : 0;
+
+    list-style : none;
+
+    flex-flow : column;
+    @include media-breakpoint-up(lg) {
+      flex-flow : row nowrap;
+    }
+    &:first-of-type {
+      background-color : grey;
+    }
+    li {
+      padding : 5px 10px;
+    }
+  }
+}
