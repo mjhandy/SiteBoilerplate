@@ -2,31 +2,43 @@ $(function () {
   var $pluginURL = '//cdnjs.cloudflare.com/ajax/libs/jquery-tubeplayer/2.1.0/jquery.tubeplayer.min.js',
     $player = $('.youtubePlayer'),
     $playButton = $('.btn-play'),
-    $seekButton = $('.btn-seek');
+    $seekButton = $('.btn-seek'),
+    $videoID = $player.attr('data-videoid'),
+    cT = $player.attr("data-chaptertiming"),
+    cTo = $.parseJSON(cT);
+
 
   // check if the player is on the page
   if ($player.length) {
 
+    // build the chapter buttons
+
+    $.each(cTo, function (i, v) {
+      // build out the buttons
+      $.each(v, function (i2, v2) {
+        $('.videoControl').append("<button class='btn btn-seek' data-seek='" + v2 + "'>" + i2 + "</button>");
+      });
+    });
 
     // load plugin
-
     $.getScript($pluginURL, function () {
       // plugin in settings
-
       $player.tubeplayer({
         preferredQuality: "auto",
-        initialVideo: "kOkQ4T5WO9E",
+        initialVideo: $videoID,
         showinfo: false
       });
 
+
+
       // seek button click
-      $seekButton.on('click', function () {
-        var $this = $(this),
-          $seekTime = $this.attr('data-seek');
+      $('body').on('click', $seekButton, function (e) {
+        if (e.target.getAttribute('data-seek')) {
+          var $seekTime = e.target.getAttribute('data-seek');
+        }
 
         $player
-          .tubeplayer("seek", $seekTime)
-          .tubeplayer("pause");
+          .tubeplayer("seek", $seekTime);
       });
 
       // play button

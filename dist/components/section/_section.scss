@@ -1,22 +1,28 @@
 section {
   padding : 25px 0;
+
   &.fullWidth {
     @include media-breakpoint-up(lg) {
       padding : 0;
     }
+
     .container {
       @include media-breakpoint-up(lg) {
         max-width : 100%;
+
         [class^='col'] {
           padding : 0;
         }
       }
+
       .copy {
         display : flex;
 
         align-items : center;
         justify-content : flex-end;
-        &-holder {@include media-breakpoint-up(lg) {
+
+        &-holder {
+          @include media-breakpoint-up(lg) {
             width : 480px;
             padding-right : 15px;
             padding-left : 15px;
@@ -28,9 +34,11 @@ section {
         }
       }
     }
+
     &-copyLeft {
       .img {
         order : 2;
+
         img {
           width : 100%;
         }
@@ -41,6 +49,7 @@ section {
       .copy {
         order : 2;
       }
+
       .img {
         img {
           width : 100%;
