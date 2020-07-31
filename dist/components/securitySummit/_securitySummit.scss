@@ -1,0 +1,15 @@
+@import '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
+@import '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css';
+
+.thumbnail-slide {
+  width : 100%;
+  margin-right : -15px;
+  margin-left : -15px;
+  &--item {
+    width : 20%;
+    height : 125px;
+    margin : 15px;
+
+    background-color : red;
+  }
+}

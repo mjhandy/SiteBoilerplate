@@ -33,12 +33,9 @@ $(function () {
 
       // seek button click
       $('body').on('click', $seekButton, function (e) {
-        if (e.target.getAttribute('data-seek')) {
-          var $seekTime = e.target.getAttribute('data-seek');
-        }
 
         $player
-          .tubeplayer("seek", $seekTime);
+          .tubeplayer("seek", e.target.getAttribute('data-seek'));
       });
 
       // play button
