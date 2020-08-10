@@ -12,4 +12,17 @@
 
     background-color : red;
   }
+  .slick {
+    &-arrow {
+      &:before {
+        color : $blue;
+      }
+    }
+    &-prev {
+      left : -15px;
+    }
+    &-next {
+      right : -15px;
+    }
+  }
 }
