@@ -1,6 +1,19 @@
 @import '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
 @import '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css';
 
+
+.video {
+  max-height : 540px;
+}
+
+.content {
+  &.scroll {
+    overflow-y : scroll;
+
+    max-height : 540px;
+  }
+}
+
 .thumbnail-slide {
   width : 100%;
   margin-right : -15px;

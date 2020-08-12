@@ -2,9 +2,17 @@ $(function () {
   console.log('slider');
 
   var $video = $('.video'),
-  $videoHeight = $video.height;
+    $content = $('.content'),
+    $contentHeight = $content.height(),
+    $videoHeight = $video.height();
 
-  console.log($videoHeight);
+
+  console.log('Video height: ' + $videoHeight + 'Content height: ' + $contentHeight);
+
+  // check content height
+  if ($contentHeight > $videoHeight) {
+    $content.addClass('scroll');
+  }
 
 
 
