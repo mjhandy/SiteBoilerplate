@@ -1,0 +1,57 @@
+
+   [
+    {
+      "id": "video1",
+      "title": "This is the title for video 1",
+      "copy": "This is the copy associated with video 1",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video1detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    },
+    {
+      "id": "video2",
+      "title": "This is the title for video 2",
+      "copy": "This is the copy associated with video 2",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video2detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    },
+    {
+      "id": "video3",
+      "title": "This is the title for video 3",
+      "copy": "This is the copy associated with video 3",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video3detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    },
+    {
+      "id": "video4",
+      "title": "This is the title for video 4",
+      "copy": "This is the copy associated with video 4",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video4detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    },
+    {
+      "id": "video5",
+      "title": "This is the title for video 5",
+      "copy": "This is the copy associated with video 5",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video4detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    },
+    {
+      "id": "video6",
+      "title": "This is the title for video 6",
+      "copy": "This is the copy associated with video 5",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video4detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    }        
+  ]
