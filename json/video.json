@@ -48,10 +48,19 @@
     {
       "id": "video6",
       "title": "This is the title for video 6",
-      "copy": "This is the copy associated with video 5",
+      "copy": "This is the copy associated with video 6",
       "url": "/video/file_example_MP4_1280_10MG.mp4",
       "detail": "video6detail.html",
       "thumbnail": "/images/320x180.jpg",
       "poster": "/images/960x540.jpg"
-    }        
+    }
+    {
+      "id": "video7",
+      "title": "This is the title for video 7",
+      "copy": "This is the copy associated with video 7",
+      "url": "/video/file_example_MP4_1280_10MG.mp4",
+      "detail": "video7detail.html",
+      "thumbnail": "/images/320x180.jpg",
+      "poster": "/images/960x540.jpg"
+    }            
   ]
