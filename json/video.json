@@ -2,21 +2,21 @@
    [
     {
       "id": "video1",
-      "title": "This is the title for video 1, the first video on the JSON string",
+      "title": "This is the title for video 1, the first video on the JSON string. They're gonna love it.",
       "copy": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a condimentum nibh. Aliquam erat volutpat. Vivamus at risus non odio condimentum condimentum ac id lacus.</p>",
       "url": "/video/file_example_MP4_1280_10MG.mp4",
       "detail": "video1detail.html",
       "thumbnail": "/images/320x180.jpg",
-      "poster": "/images/960x540.jpg"
+      "poster": "/images/video1poster.jpg"
     },
     {
       "id": "video2",
       "title": "This is the title for video 2",
       "copy": "This is the copy associated with video 2",
-      "url": "/video/file_example_MP4_1280_10MG.mp4",
-      "detail": "video2detail.html",
+      "url": "/video/sample-mp4-file.mp4",
+      "detail": "https://www.blackberry.com",
       "thumbnail": "/images/320x180.jpg",
-      "poster": "/images/960x540.jpg"
+      "poster": "/images/video2poster.jpg"
     },
     {
       "id": "video3",

@@ -1,8 +1,8 @@
 $(function () {
   var $videoJSON = '/json/video.json',
     $videoSliderThumbnail = '',
-    $videoPlayer = $('#videoPlayer');
-  $videoContent = '',
+    $videoPlayer = $('#videoPlayer'),
+    $videoContent = '',
     $lastVideo = localStorage.getItem('lastVideoPlayed'),
     $tmbNailButton = $('.thumbnail-slide--button');
 
@@ -33,23 +33,30 @@ $(function () {
 
       // build out the main video and content
       if ($lastVideo === null && i === 0) {
-        // video and video poster
-        $videoPlayer.append("<source src='" + $url + "'></source>");
-        // video content and links
-        $videoContent += "<h2>" + $title + "</h2>";
-        $videoContent += $copy;
-        $videoContent += "<p><a href='" + $detail + "'>Video Details</a></p>";
+        buildVideoAndContent();
       }
-
-
+      else if ($lastVideo === $vid) {
+        buildVideoAndContent();
+      }
 
       // build out the thumbnails
       $videoSliderThumbnail += "<div class='thumbnail-slide--item ' data-index='" + i + "'>";
       $videoSliderThumbnail += "<button class='thumbnail-slide--button' data-videoid='" + $vid + "'>";
-      $videoSliderThumbnail += "<img src='" + $thumbnail + "' alt='" + $title + "'>";
-      $videoSliderThumbnail += "<h3>" + $title + "</h3>";
-      $videoSliderThumbnail += "</button>";
-      $videoSliderThumbnail += "</div>";
+      $videoSliderThumbnail += '<img src="' + $thumbnail + '" alt="' + $title + '">';
+      $videoSliderThumbnail += '<h3>' + $title + '</h3>';
+      $videoSliderThumbnail += '</button>';
+      $videoSliderThumbnail += '</div>';
+
+      function buildVideoAndContent() {
+        // video and video poster
+        $videoPlayer
+          .attr('src', $url)
+          .attr('poster', $poster);
+        // video content and links
+        $videoContent += '<h2>' + $title + '</h2>';
+        $videoContent += $copy;
+        $videoContent += '<p><a href="' + $detail + '" target="_blank" class="videoContentLink">Video Details</a></p>';
+      }
 
 
     });
@@ -57,6 +64,7 @@ $(function () {
     $('.content').append($videoContent);
     // add slider html
     $('#videoThumbnailSlider').append($videoSliderThumbnail);
+    // init the slider
     buildSlider();
 
     // thumbnail click
@@ -65,7 +73,14 @@ $(function () {
         $videoID = $this.attr('data-videoid'),
         $vTitle = "<h2>" + localStorage.getItem($videoID + 'title') + "</h2>",
         $vCopy = localStorage.getItem($videoID + 'copy'),
-        $vDetail = localStorage.getItem($videoID + 'detail');
+        $vDetail = localStorage.getItem($videoID + 'detail'),
+        $vURL = localStorage.getItem($videoID + 'url'),
+        $vPoster = localStorage.getItem($videoID + 'poster');
+
+      // set video
+      $videoPlayer
+        .attr('src', $vURL)
+        .attr('poster', $vPoster);
 
       // set video copy
       $('.content')
@@ -73,10 +88,17 @@ $(function () {
         .append($vCopy)
         .append("<p><a href='" + $vDetail + "'>Video Details</a></p>");
 
-      console.log($vTitle);
+      // set local storage lastplayed with videoID
+      localStorage.setItem('lastVideoPlayed', $videoID);
 
     });
+    // pause video if video detail or video lib links are clicks
+    $('.content').on('click', '.videoContentLink', function () {
+      console.log('content link clicked');
+      $videoPlayer.pause();
+    });
   });
+
 
 
   function buildSlider() {
