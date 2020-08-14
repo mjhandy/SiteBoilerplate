@@ -1,7 +1,7 @@
 $(function () {
   var $videoJSON = '/json/video.json',
     $videoSliderThumbnail = '',
-    $videoPlayer = $('#videoPlayer'),
+    $videoPlayer = $('video'),
     $videoContent = '',
     $lastVideo = localStorage.getItem('lastVideoPlayed'),
     $slickURL = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
@@ -10,7 +10,7 @@ $(function () {
   //load video JSON
   $.getJSON($videoJSON, function (data) {
 
-    // loop through the JSON 
+    // loop through the JSON, add data to Local Storage, build the playlist thumbnails 
     $.each(data, function (i, e) {
       var $vid = e.id,
         $title = e.title,
@@ -51,7 +51,7 @@ $(function () {
       function buildVideoAndContent() {
         // video and video poster
         $videoPlayer
-          .attr('src', $url)
+          .html('<source src="' + $url + '" type="video/mp4"></source>')
           .attr('poster', $poster)
           .attr('videoID', $vid);
         // video content and links
@@ -81,14 +81,18 @@ $(function () {
       $this.addClass('active');
       // set video
       $videoPlayer
-        .attr('src', $vURL)
-        .attr('poster', $vPoster);
+        .html('')
+        .html('<source src="' + $vURL + '" type="video/mp4"></source>')
+        .attr('poster', $vPoster)
+        .attr('videoID', $videoID);
+      // load video
+      $videoPlayer[0].load();
 
       // set video copy
       $('.content')
         .html($vTitle)
         .append($vCopy)
-        .append("<p><a href='" + $vDetail + "'>Video Details</a></p>");
+        .append('<p><a href="' + $vDetail + '" target="_blank">Video Details</a></p>');
 
       // set local storage lastplayed with videoID
       localStorage.setItem('lastVideoPlayed', $videoID);
@@ -98,9 +102,9 @@ $(function () {
   });
 
   // pause video if video detail or video lib links are clicks
-  $('.content').on('click', '.videoContentLink', function () {
+  $('.content').on('click', 'a', function () {
     console.log('content link clicked');
-    $videoPlayer.pause();
+    $videoPlayer[0].pause();
 
 
   });
