@@ -11,8 +11,8 @@
     },
     {
       "id": "video2",
-      "title": "This is the title for video 2",
-      "copy": "This is the copy associated with video 2",
+      "title": "The Second Movie in the series. Much better than the First, and probably better than the third.",
+      "copy": "We find out the tragic backstory of our reluctant hero.",
       "url": "/video/sample-mp4-file.mp4",
       "detail": "https://www.blackberry.com",
       "thumbnail": "/images/320x180.jpg",
