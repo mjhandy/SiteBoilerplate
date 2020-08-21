@@ -2,6 +2,8 @@
 @import '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css';
 
 #videoPlayList {
+  background-color : $white;
+
   @include media-breakpoint-up(lg) {
     margin : 100px 0;
   }
