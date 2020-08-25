@@ -7,7 +7,8 @@ $(function () {
       $videoCount,
       $feedID,
       $lastVideo = localStorage.getItem('lastVideoPlayed'),
-      $slickURL = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+      $slickURL = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+      video = $videoPlayer[0];
     /* 
       Load the video JSON data
     */
@@ -118,24 +119,28 @@ $(function () {
 
     // pause video if video detail or video lib links are clicks
     $('.content').on('click', 'a', function () {
-      $videoPlayer[0].pause();
+      video.pause();
     });
     /* 
       Video Playback and Control features
     */
-    // PiP the video if the user scroll
-    // $(window).scroll(function () {
-    //   $('video').requestPictureInPicture();
-    // });
-    // $("video").on("pause", function (e) {
-    //   console.debug("Video paused. Current time of videoplay: " + e.target.currentTime);
-    // });
-    // If the video is playing, enable PiP on scroll
-    // $('video').on('play', function (e) {
-    //   $(window).scroll(function () {
-    //     $('video')[0].requestPictureInPicture();
-    //   });
-    // });
+    $('.playerControls-play').on('click', function () {
+      if (video.paused)
+        video.play();
+      else
+        video.pause();
+      $(this).toggleClass('play');
+    });
+    $('progress').on('click', function (e) {
+      var pos = (e.pageX - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
+      video.currentTime = pos * video.duration;
+    });
+    video.on('timeupdate', function () {
+      var currentPos = video[0].currentTime; //Get currenttime
+      var maxduration = video[0].duration; //Get video duration
+      var percentage = 100 * currentPos / maxduration; //in %
+      $('.timeBar').css('width', percentage + '%');
+    });
   }
 
   /*
