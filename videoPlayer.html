@@ -300,20 +300,20 @@
     <section id='videoPlayer'>
       <div class='container'>
         <div class='row'>
-          <div class='col-12'>
-            <div class='video'>
+          <div class='col-6'>
+            <div class='embed-responsive  embed-responsive-16by9 video'>
               <div class='video-titleCard'>
+                <div class='video-title'></div>
 
               </div>
-              <div class='video-player'>
-                <video class='video-player--video'>
-                  <source src="/video/file_example_MP4_1280_10MG.mp4">
-                </video>
-                <div class='video-player--controls'>
-                  
-                </div>
+              <video id='video' class='embed-responsive-item video-player--video' controls title='This is the video title'>
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4">
+              </video>
+              <div class='video-player--controls'>
+
               </div>
               <div class='video-endCard'></div>
+
             </div>
           </div>
         </div>
@@ -323,23 +323,6 @@
 
   </main>
   <footer>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-12'>
-          <h2>Footer</h2>
-        </div>
-        <div class="col mx-1">1</div>
-        <div class="col-3 mx-1">2</div>
-        <div class="col-3 mx-1">3</div>
-      </div>
-      <div class='row'>
-        <div class="col mx-1">1</div>
-        <div class="col mx-1">2</div>
-        <div class="col mx-1">3</div>
-        <div class="col mx-1">4</div>
-        <div class="col mx-1">5</div>
-      </div>
-    </div>
   </footer>
 
   <!-- Load JQuery -->
@@ -347,10 +330,10 @@
   <!-- load Bootstrap JS -->
   <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  </script>
   <!-- custom JS -->
   <script src="/src/js/main.js"></script>
 </body>

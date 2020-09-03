@@ -1,8 +1,43 @@
-.video{
-  position: relative;
-  &-titleCard-
-  &-player,
-  &-endCard{
-position: absolute;
+.video {
+  &-titleCard,
+  &-player--video,
+  &-endCard {
+    position : absolute;
+  }
+  &-titleCard,
+  &-endCard {
+    z-index : 10;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+
+    display : flex;
+
+    cursor : pointer;
+
+    @include transition(all,0.5s,ease-in-out);
+  }
+  &-titleCard {
+    visibility : visible;
+
+    opacity : 1;
+    background-color : red;
+    &.hide {
+      visibility : hidden;
+
+      opacity : 0;
+    }
+  }
+  &-endCard {
+    visibility : hidden;
+
+    opacity : 0;
+    background-color : blue;
+    &.show {
+      visibility : visible;
+
+      opacity : 1;
+    }
   }
 }

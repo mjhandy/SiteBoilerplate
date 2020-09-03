@@ -10,8 +10,7 @@
 
     list-style : none;
 
-    flex-flow : column;
-    @include media-breakpoint-up(lg) {
+    flex-flow : column;@include media-breakpoint-up(lg) {
       flex-flow : row nowrap;
     }
     &:first-of-type {
