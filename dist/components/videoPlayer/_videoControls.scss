@@ -1,0 +1,13 @@
+.video-player--controls {
+  display : flex;
+  .scrubline {
+    width : 100%;
+    height : 5px;
+
+    background-color : red;
+  }
+}
+
+.s7controlbar {
+  display : none;
+}

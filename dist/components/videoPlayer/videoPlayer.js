@@ -9,21 +9,21 @@ $(function () {
     Let's set some initial items
   */
   // set the video title
-  $videoTitle.html($video.getAttribute('title'));
+  // $videoTitle.html($video.getAttribute('title'));
 
   /* 
     Title Card
     * On click, fade out the card and start the video playing
   */
-  $titleCard.on('click', function () {
-    $(this).addClass('hide');
-    $video.play();
-  });
+  // $titleCard.on('click', function () {
+  //   $(this).addClass('hide');
+  //   $video.play();
+  // });
   /*
     End card
     * When the video ends, show the end card
   */
-  $video.addEventListener('ended', videoEnd, false);
+  // $video.addEventListener('ended', videoEnd, false);
 
 
 
