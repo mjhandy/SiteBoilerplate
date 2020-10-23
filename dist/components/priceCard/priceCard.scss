@@ -1,0 +1,147 @@
+#priceCards {
+  background-color : #000;
+
+
+  .row {
+    @include media-breakpoint-up(lg) {
+      width : 75%;
+      margin : auto;
+    }
+    [class^='col-'] {
+      &:nth-child(1) {
+        @include media-breakpoint-up(lg) {
+          order : 1;
+        }
+        order : 2;
+      }
+      &:nth-child(2) {
+        @include media-breakpoint-up(lg) {
+          order : 2;
+        }
+        order : 1;
+      }
+      &:nth-child(3) {
+        order : 3;
+      }
+    }
+  }
+}
+.price-card {
+  margin-bottom : 30px;
+
+  background-color : #fff;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom : 0;
+  }
+
+  &-inner {
+    padding : 0 20px 15px;
+
+    @include media-breakpoint-up(lg) {
+      padding : 0 40px 30px;
+    }
+  }
+  .top-ribbon {
+    font-size : 14px;
+    font-weight : 700;
+
+    min-height : 5px;
+
+    color : #fff;
+    background-image : linear-gradient(to right,#1feea5 0,$BBblue);
+    span {
+      display : block;
+
+      width : 100%;
+      padding : 8px 0 5px;
+
+      text-align : center;
+    }
+  }
+  .devices {
+    font-size : 24px;
+    font-weight : 700;
+
+    padding : 15px 0;
+
+    text-align : center;
+
+    @include media-breakpoint-up(lg) {
+      padding : 40px 0;
+    }
+  }
+  .check-list {
+    font-size : 14px;
+
+    margin-bottom : 35px;
+    padding : 0;
+
+    list-style : none;
+
+    text-align : center;
+
+    opacity : 0.75;
+    color : #000;
+    li {
+      line-height : 1.7;
+
+      display : block;
+
+      padding : 0;
+    }
+  }
+  .priceBlock {
+    padding : 15px;
+
+    background-color : rgba(241,243,247,0.5);
+    .full-price {
+      font-size : 14px;
+      font-weight : 700;
+
+      text-align : center;
+      text-decoration : line-through;
+
+      color : #f42181;
+    }
+    .price {
+      font-size : 36px;
+      font-weight : 900;
+      line-height : 1;
+
+      text-align : center;
+      &-term {
+        font-size : 14px;
+        font-weight : bold;
+
+        color : #333;
+      }
+    }
+
+    .perYear {
+      font-size : 14px;
+      font-weight : 700;
+
+      margin-top : -5px;
+
+      text-align : center;
+    }
+    .billed {
+      font-size : 14px;
+      font-style : italic;
+
+      margin : 30px 0;
+
+      text-align : center;
+    }
+    .cta {
+      text-align : center;
+    }
+  }
+
+  .review {
+    &-star {
+      color : #ffbd0a;
+    }
+  }
+}
