@@ -235,31 +235,8 @@
         <div class='row'>
           <div class='col-10'>
             <div class='video'>
-              <div class='video-titleCard hide'>
-                <div class='video-title'></div>
-              </div>              
-              <style type="text/css">
-                #s7_videoview.s7videoviewer{
-                  width:100%;
-                  height:auto;
-                }
-                </style>
-                <script type="text/javascript" language="javascript" src="http://s7d2.scene7.com/s7viewers/html5/js/VideoViewer.js"></script>
-                
-                <div id="s7_videoview"></div>
-                <script type="text/javascript">
-                var s7_videoview = new s7viewers.VideoViewer({
-                  "containerId" : "s7_videoview",
-                    "params" : {
-                    "asset" : "blackberry/215-68_embedding-the-blackberry-in-app-protection-sdk-into-your-applications",
-                    "serverurl" : "http://s7d2.scene7.com/is/image/",
-                    "contenturl": "http://s7d2.scene7.com/skins/",
-                    "config": "Scene7SharedAssets/Universal_HTML5_Video", 
-                    "emailurl": "http://s7d2.scene7.com/s7/emailFriend", 
-                    "videoserverurl": "http://s7d2.scene7.com/is/content/", 
-                    "config2": "companypreset"
-                }	}).init();
-                </script>              
+              <div class='video-startCard'></div>
+              <video></video>
               <div class='video-player--controls'>
                 <div class='scrubLine'></div>
                 <div class='pausePlay'></div>
@@ -284,9 +261,7 @@
   </script>
   <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
-  <!-- custom JS -->
-  <script type="text/javascript" language="javascript" src="https://s7d2.scene7.com/s7viewers/html5/js/VideoViewer.js"></script>                 
+  </script>                 
   <script src="/src/js/main.js"></script>
 </body>
 
