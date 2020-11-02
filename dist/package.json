@@ -2,7 +2,7 @@
   "name": "BaseSiteBoilerplate",
   "version": "1.0.0",
   "description": "Base site boilerplate template",
-  "main": "index.phpcd dist",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

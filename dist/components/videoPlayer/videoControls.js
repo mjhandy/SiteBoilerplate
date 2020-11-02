@@ -3,7 +3,7 @@ $(function () {
 
 
 
-  $('.s7controlbar').remove();
+
 
 
 

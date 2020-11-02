@@ -53,7 +53,7 @@
   }
 
   @else if $style==first {
-    $colours : #1472d7, #838d96, #464b53, #000, #000;
+    $colours : #1472d7, #838d96, #464b53, #000000, #000000;
   }
 
 
@@ -77,16 +77,16 @@
 }
 
 .suites {
-  position : relative;@include media-breakpoint-between(sm, lg) {
-    margin-right : -15px;
-    margin-left : -15px;
-
-    flex-flow : column wrap;
-  }@include media-breakpoint-up(lg) {
+  position : relative;@include media-breakpoint-up(lg) {
     flex-direction : row;
 
     margin-right : -15px;
     margin-left : -15px;
+  }@include media-breakpoint-between(sm, lg) {
+    margin-right : -15px;
+    margin-left : -15px;
+
+    flex-flow : column wrap;
   }
 
   &.theme {
