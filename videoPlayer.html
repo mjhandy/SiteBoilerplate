@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <div class='bbNavigation'>
+    <div class='mainNav'>
       <a href='#main' class='skip'>Skip to Main</a>
       <div class='mainNav'>
         <div class='container-lg'>
@@ -234,14 +234,27 @@
       <div class='container'>
         <div class='row'>
           <div class='col-10'>
-            <div class='video'>
-              <div class='video-startCard'></div>
-              <video></video>
-              <div class='video-player--controls'>
-                <div class='scrubLine'></div>
-                <div class='pausePlay'></div>
+            <div class='videoContainer'>
+
+              <div class='videoContainer-video'>
+                <div class="videoContainer-video--topControls controls"></div>
+                <video src="/video/4k-video-sample.mp4" id='video'></video>
+                <div class="videoContainer-video--bottomControls controls">
+
+                  <div class='progressBars'>
+                    <div class='progressBars-playing'></div>
+                  </div>
+                  <div class='buttons'>
+                    <div class='playPause' role='button'>
+                      <svg width="32px" class='icon' height="32px" xmlns="http://www.w3.org/2000/svg" aria-label="Play Video">
+                        <use class='playPauseUse' href="/images/bootstrap-Icons/bootstrap-icons.svg#play-fill" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class='video-endCard'></div>                
+
+
             </div>
           </div>
         </div>
@@ -258,10 +271,10 @@
   <!-- load Bootstrap JS -->
   <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>                 
+    </script>
   <script src="/src/js/main.js"></script>
 </body>
 

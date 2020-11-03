@@ -1,41 +1,57 @@
 $(function () {
-  'use strict';
 
-  var $titleCard = $('.video-titleCard'),
-    $endCard = $('.video-endCard'),
-    $video = document.getElementById('video'),
-    $videoTitle = $('.video-title');
-  /*
-    Let's set some initial items
-  */
-  // set the video title
-  // $videoTitle.html($video.getAttribute('title'));
+  // variables
+  const video = $("#video")[0], // video DOM object
+    progressPlaying = $('.progressBars-playing');
 
-  /* 
-    Title Card
-    * On click, fade out the card and start the video playing
-  */
-  // $titleCard.on('click', function () {
-  //   $(this).addClass('hide');
-  //   $video.play();
-  // });
-  /*
-    End card
-    * When the video ends, show the end card
-  */
-  // $video.addEventListener('ended', videoEnd, false);
+  // buttons
+  const playButton = $('.playPause'),
+    playPauseIcon = $('.playPauseUse');
+
+  /* progress bars START */
+
+  // progress play bar
+  function updateProgress() {
+    // Calculate current progress
+    let value = (100 / video.duration) * video.currentTime;
 
 
+    // Update the slider value
+    progressPlaying.width(value + '%');
+  }
+  // make play bar cliable for seek
+  progressPlaying.on('click', function () {
+    let w = $(this).width();
 
-  /*
-    Custom Functions
-  */
+    console.log(w)
+  });
 
-  // when video ends
-  function videoEnd() {
-    $endCard.addClass('show');
-  };
+  /* progress bars END */
 
 
+  /* buttons START */
+
+  // video Play/Pause button
+  playButton.on('click', function () {
+    if (video.paused == true) {
+      video.play();
+      playPauseIcon
+        .attr('href', '/images/bootstrap-Icons/bootstrap-icons.svg#pause-fill');
+      playButton
+        .attr('aria-label', 'Pause Video');
+    }
+    else {
+      video.pause();
+      playPauseIcon
+        .attr('href', '/images/bootstrap-Icons/bootstrap-icons.svg#play-fill');
+      playButton
+        .attr('aria-label', 'Play Video');
+    }
+  });
+  /* buttons START */
+
+  /* event listener */
+
+  video.addEventListener('timeupdate', updateProgress, false);
 
 });

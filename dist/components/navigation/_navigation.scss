@@ -1,4 +1,4 @@
-.bbNavigation {
+.mainNav {
   display : flex;
   flex-direction : column;
 
@@ -37,7 +37,9 @@
       border : 2px solid $blue;
       border-radius : 5px;
       outline : none;
-      background-color : #000000;@include font-size(16px, 1, 400);
+      background-color : #000000;
+
+      @include font-size(16px, 1, 400);
     }
   }
 
@@ -57,7 +59,9 @@
       margin : 0;
       padding : 0;
 
-      list-style : none;@include media-breakpoint-up(lg) {
+      list-style : none;
+
+      @include media-breakpoint-up(lg) {
         position : static;
 
         flex-direction : row;
@@ -95,14 +99,17 @@
       visibility : hidden;
       flex-direction : column;
 
-      opacity : 0;@include media-breakpoint-up(lg) {
+      opacity : 0;
+
+      @include media-breakpoint-up(lg) {
         position : absolute;
 
         display : flex;
         flex-direction : row;
 
         flex-wrap : wrap;
-      }@include transition(all, 0.5s, ease-in-out);
+      }
+      @include transition(all, 0.5s, ease-in-out);
       &.megaMenu {
         left : 0;
 
@@ -139,14 +146,17 @@
         right : 15px;
 
         width : 25px;
-        padding : 0;@include media-breakpoint-up(lg) {
+        padding : 0;
+
+        @include media-breakpoint-up(lg) {
           display : none;
         }
       }
 
       // global search toggle
       &-search {
-        fill : $white;@include media-breakpoint-up(lg) {
+        fill : $white;
+        @include media-breakpoint-up(lg) {
           padding : 13px;
         }
 
@@ -192,7 +202,9 @@
 
         &.mobile {
           position : absolute;
-          right : 60px;@include media-breakpoint-up(lg) {
+          right : 60px;
+
+          @include media-breakpoint-up(lg) {
             display : none;
           }
         }
@@ -222,7 +234,8 @@
         width : 25px;
         padding : 0;
 
-        fill : $black;@include media-breakpoint-up(lg) {
+        fill : $black;
+        @include media-breakpoint-up(lg) {
           display : none;
         }
       }
@@ -243,7 +256,9 @@
 
       padding : 10px 10px 0 10px;
 
-      color : $black;@include font-size(13px, 1.2, 400);
+      color : $black;
+
+      @include font-size(13px, 1.2, 400);
       &:hover,
       &:focus {
         color : $blue;
@@ -255,9 +270,13 @@
       padding : 10px;
 
       border-bottom : 1px solid grey;
-      background-color : $white;@include font-size(16px, 1.2, 700);
+      background-color : $white;
+
+      @include font-size(16px, 1.2, 700);
       a {
-        padding : 0;@include font-size(16px, 1.2, 700);
+        padding : 0;
+
+        @include font-size(16px, 1.2, 700);
         // open close icon for mobile
         &:after {
           display : block;
@@ -265,9 +284,12 @@
 
           height : 20px;
 
-          content : '+';@include media-breakpoint-up(lg) {
+          content : '+';
+
+          @include media-breakpoint-up(lg) {
             display : none;
-          }@include font-size(30px, 0.5, 400);
+          }
+          @include font-size(30px, 0.5, 400);
         }
 
         &:hover,
@@ -288,7 +310,9 @@
     &-body {
       display : none;
 
-      padding : 0;@include media-breakpoint-up(lg) {
+      padding : 0;
+
+      @include media-breakpoint-up(lg) {
         display : block;
 
         opacity : 1;
@@ -327,7 +351,10 @@
         letter-spacing : 1px;
         text-transform : uppercase;
 
-        color : $black;@include font-size(18px, 1, 400);@include media-breakpoint-up(lg) {
+        color : $black;
+
+        @include font-size(18px, 1, 400);
+        @include media-breakpoint-up(lg) {
           display : flex;
 
           height : 50px;
@@ -337,8 +364,10 @@
 
           color : $white;
 
-          align-items : center;@include font-size(13px, 1, 400);
-        }@include transition();
+          align-items : center;
+          @include font-size(13px, 1, 400);
+        }
+        @include transition();
         &:hover,
         &:focus,
         &[aria-expanded='true'] {
@@ -367,10 +396,13 @@
 
           svg {
             width : 150px;
-            margin : 0;@include media-breakpoint-up(lg) {
+            margin : 0;
+
+            @include media-breakpoint-up(lg) {
               width : 170px;
               margin-right : 45px;
-            }@include transition();
+            }
+            @include transition();
           }
 
           &.smaller {
@@ -392,7 +424,9 @@
 
         width : 100%;
 
-        background-color : $white;@include media-breakpoint-up(lg) {
+        background-color : $white;
+
+        @include media-breakpoint-up(lg) {
           position : static;
 
           display : flex;
@@ -420,7 +454,9 @@
       }
 
       &-sub {
-        background-color : $white;@include media-breakpoint-up(lg) {
+        background-color : $white;
+
+        @include media-breakpoint-up(lg) {
           box-shadow : 0 10px 13px -7px $grey, 5px 5px 15px 5px rgba($grey, 0);
         }
 

@@ -1,43 +1,93 @@
-.video {
-  &-titleCard,
-  &-player--video,
+.videoContainer {
+  display : flex;
+  flex-direction : column;
+
+  width : 100%;
+
+  &-startCard,
   &-endCard {
     position : absolute;
-  }
-  &-titleCard,
-  &-endCard {
-    z-index : 10;
     top : 0;
     right : 0;
     bottom : 0;
     left : 0;
 
-    display : flex;
-
-    cursor : pointer;
-
-    @include transition(all,0.5s,ease-in-out);
+    display : none;
   }
-  &-titleCard {
-    visibility : visible;
 
-    opacity : 1;
-    background-color : red;
-    &.hide {
-      visibility : hidden;
+  &-video {
+    position : relative;
 
-      opacity : 0;
+    width : 100%;
+    height : 100%;
+    &--topControls {
+      top : 0;
+    }
+    &--bottomControls {
+      bottom : 0;
+      /* progress bars START */
+      .progressBars {
+        &-playing {
+          width : 0;
+          height : 5px;
+
+          background-color : red;
+        }
+      }
+
+
+      /* progress bars END */
+
+
+      /* buttons START */
+      .buttons {
+        position : absolute;
+        z-index : 10;
+        top : 5px;
+
+        width : 100%;
+        padding : 5px;
+        .icon {
+          display : inline-block;
+
+          color : $white;
+        }
+        .playPause {
+          display : block;
+
+          width : 32px;
+          height : 32px;
+        }
+      }
+      /* buttons END */
     }
   }
-  &-endCard {
-    visibility : hidden;
-
-    opacity : 0;
-    background-color : blue;
-    &.show {
-      visibility : visible;
-
-      opacity : 1;
-    }
+  video {
+    width : 100%;
   }
+  // video controls START
+  .controls {
+    position : absolute;
+    z-index : 5;
+
+    width : 100%;
+    height : 50px;
+
+    background-color : rgba($black, 0.8);
+  }
+
+  .progressBars {
+    position : absolute;
+    top : 0;
+
+    width : 100%;
+    height : 5px;
+  }
+
+
+
+
+
+
+  // video controls END
 }
