@@ -2,6 +2,7 @@ $(function () {
 
   // variables
   const video = $("#video")[0], // video DOM object
+    progressBars = $('.progressBars'),
     progressPlaying = $('.progressBars-playing');
 
   // buttons
@@ -20,10 +21,15 @@ $(function () {
     progressPlaying.width(value + '%');
   }
   // make play bar cliable for seek
-  progressPlaying.on('click', function () {
-    let w = $(this).width();
+  progressBars.on('click', function (e) {
+    let o = $(this).offset(),
+      l = (e.pageX - o.left),
+      w = $('.progressBars').width(), // bar width
+      d = video.duration, // video duration
+      p = l / w,
+      vt = d * p; // video time
 
-    console.log(w)
+    video.currentTime = vt;
   });
 
   /* progress bars END */
