@@ -2,8 +2,9 @@ $(function () {
 
   // variables
   const video = $("#video")[0], // video DOM object
+    seek = $('.progressBar-seek'),
     progressBars = $('.progressBars'),
-    progressPlaying = $('.progressBars-playing');
+    progressPlaying = $('.progressBar-playing');
 
   // buttons
   const playButton = $('.playPause'),
