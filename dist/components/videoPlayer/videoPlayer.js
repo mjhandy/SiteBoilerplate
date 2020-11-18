@@ -57,12 +57,34 @@ $(function () {
 
     // Mute button
     volumeButton.on('click', function () {
-      console.log('mute/unmute');
+      var $this = $(this),
+        vc = video.volume, // video volume
+        ci = volumeButtonIcon.attr('href'); // current icon
+      console.log('mute/unmute ', vc, ci);
+      // toggle icon
+
     });
     // volume slider
     volumeSlider.on('input change', function (e) {
       var $this = $(this),
-        v = $this.val();     
+        v = parseInt($this.val());
+      console.log(v);
+      // set video volume
+      video.volume = v / 100;
+      // set volume button icon based on slider
+      if (v === 0) {
+        volumeButtonIcon
+          .attr('href', '/images/bootstrap-Icons/bootstrap-icons.svg#volume-mute-fill');
+      }
+      else if (v > 0 || v <= 50) {
+        volumeButtonIcon
+          .attr('href', '/images/bootstrap-Icons/bootstrap-icons.svg#volume-down-fill');
+      }
+      else {
+        volumeButtonIcon
+          .attr('href', '/images/bootstrap-Icons/bootstrap-icons.svg#volume-up-fill');
+      }
+
     });
     /* buttons END */
 
