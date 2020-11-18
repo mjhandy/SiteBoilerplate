@@ -27,34 +27,52 @@
       bottom : 0;
       /* progress bars START */
       .progressBars {
-        .progressBar{
+        .progressBar {
           position : absolute;
+
           width : 100%;
-          &-seek{
-            z-index: 1000;
-            background: transparent;            
+          // reset seek input
+          input[type=range] {
+            background : transparent;
+
+            -webkit-appearance : none;
+            &::-webkit-slider-runnable-track {
+              -webkit-appearance : none;
+            }
+            &::-webkit-slider-thumb {
+              -webkit-appearance : none;
+            }
+            &::-ms-track {
+              width : 100%;
+
+              cursor : pointer;
+
+              color : transparent;
+              border-color : transparent;
+              background : transparent;
+            }
+          }
+          &-seek {
+            z-index : 1000;
           }
           &-buffering {
-            
             z-index : 10;
             top : 0;
-  
-            
+
             height : 5px;
-  
+
             background-color : $blue;
           }
           &-playing {
             z-index : 100;
             top : 0;
-  
+
             width : 0;
             height : 5px;
-  
+
             background-color : red;
           }
         }
-
       }
 
 
