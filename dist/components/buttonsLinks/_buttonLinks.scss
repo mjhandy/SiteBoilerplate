@@ -24,8 +24,7 @@
 
     align-items : center;@include font-size(14px, 1, 500);@include transition(all, 0.5s, ease-in-out);@include media-breakpoint-up(lg) {
       margin : 0 10px 0 0;
-    }
-    justify-content : center;
+    }  justify-content : center;
     &-primary {
       &--hollow {
         border : 1px solid $borderColour;@include box_shadow(2, 1);

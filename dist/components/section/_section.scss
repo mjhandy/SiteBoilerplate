@@ -21,7 +21,8 @@ section {
         align-items : center;
         justify-content : flex-end;
 
-        &-holder {@include media-breakpoint-up(lg) {
+        &-holder {
+          @include media-breakpoint-up(lg) {
             width : 480px;
             padding-right : 15px;
             padding-left : 15px;

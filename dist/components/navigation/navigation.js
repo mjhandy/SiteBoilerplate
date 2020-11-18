@@ -13,17 +13,17 @@ $(function () {
   $subToggle.on('click', function () {
     var $this = $(this),
       $ariaExpanded = $this.attr('aria-expanded');
-    // hide all open sub navs and reset aria tags
-    ariaReset();
     // hide search and reset button state
     $searchButton.attr('aria-expanded', false);
     $searchBox.removeClass('show');
     // toggled sub nav
     if ($ariaExpanded === 'true') {
+      console.log('close sub nav');
       $this.attr('aria-expanded', false);
       $this.next().attr('aria-hidden', false);
     }
     else {
+      console.log('open sub nav');
       $this.attr('aria-expanded', true);
       $this.next().attr('aria-hidden', true);
     }

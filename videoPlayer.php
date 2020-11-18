@@ -26,24 +26,32 @@
     <section id='videoPlayer'>
       <div class='container'>
         <div class='row'>
-          <div class='col-10'>
+          <div class='col-12 col-lg-10'>
             <div class='videoContainer'>
 
               <div class='videoContainer-video'>
                 <div class="videoContainer-video--topControls controls"></div>
                 <video src="/video/4k-video-sample.mp4" id='video'></video>
                 <div class="videoContainer-video--bottomControls controls">
-
+                  <div class='progressBars'>
                     <div class='progressBar progressBar-buffering'></div>
                     <div class='progressBar progressBar-playing'></div>
                   </div>
                   <div class='buttons'>
-                    <div class='playPause' role='button'>
-                      <svg width="32px" class='icon' height="32px" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Play Video">
+                    <div class='playPause button' role='button'>
+                      <svg width="32px" class='icon' height="32px" xmlns="http://www.w3.org/2000/svg" aria-label="Play Video">
                         <use class='playPauseUse' href="/images/bootstrap-Icons/bootstrap-icons.svg#play-fill" />
                       </svg>
                     </div>
+                    <div class='volumeMuteControls'>
+                      <div class='volumeMute button' role='button'>
+                        <svg width="32px" class='icon' height="32px" xmlns="http://www.w3.org/2000/svg" aria-label="Play Video">
+                          <use class='volumeMuteUse' href="/images/bootstrap-Icons/bootstrap-icons.svg#volume-up-fill" />
+                        </svg>
+                      </div>                      
+                      <input class="volumeMute-slider" type="range" min="0" max="100" step="1"></input>
+                    </div>
+
                   </div>
                 </div>
               </div>

@@ -1,13 +1,13 @@
 header {
   background-color : rgba($grey, 0.08);
-   > .container {
+  > .container {
     display : flex;
     flex-direction : row;
 
     min-height : 50vh;
 
     align-items : center;
-     > .row {
+    > .row {
       width : 100%;
     }
   }
