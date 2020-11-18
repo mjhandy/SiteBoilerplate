@@ -1,18 +1,4 @@
-<!doctype html>
-<html class="" lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Site Template</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/main.css">
-</head>
-
-<body>
-  <header>
-    <div class='mainNav'>
+<div class='mainNav'>
       <a href='#main' class='skip'>Skip to Main</a>
       <div class='mainNav'>
         <div class='container-lg'>
@@ -220,63 +206,3 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class='row'>
-        <div class='col-12 col-lg-6'>
-          <h1>Site Template</h1>
-          <h2>Video Player</h2>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main id='main'>
-    <section id='videoPlayer'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-10'>
-            <div class='videoContainer'>
-
-              <div class='videoContainer-video'>
-                <div class="videoContainer-video--topControls controls"></div>
-                <video src="/video/4k-video-sample.mp4" id='video'></video>
-                <div class="videoContainer-video--bottomControls controls">
-
-                    <div class='progressBar progressBar-buffering'></div>
-                    <div class='progressBar progressBar-playing'></div>
-                  </div>
-                  <div class='buttons'>
-                    <div class='playPause' role='button'>
-                      <svg width="32px" class='icon' height="32px" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Play Video">
-                        <use class='playPauseUse' href="/images/bootstrap-Icons/bootstrap-icons.svg#play-fill" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-  </main>
-  <footer>
-  </footer>
-
-  <!-- Load JQuery -->
-  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-  <!-- load Bootstrap JS -->
-  <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-  <script src="/src/js/main.js"></script>
-</body>
-
-</html>
