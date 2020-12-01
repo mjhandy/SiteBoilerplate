@@ -3,8 +3,8 @@
 *.sass.map
 *.scss.map
 *.css
-dist/package-lock.json
-dist/node_modules/
-src/
+src/package-lock.json
+src/node_modules/
+dist/
 package-lock.json
 video/
