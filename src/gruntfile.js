@@ -13,7 +13,7 @@ module.exports = function (grunt) {
       components: 'components',
       scripts: 'scripts',
       scss: 'scss',
-      src: '../src'
+      dist: '../dist'
     },
     // CSS Comb
     csscomb: {
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
           ]
         },
         files: {
-          '<%= info.src %>/css/main.css': '<%= info.scss %>/main.scss'
+          '<%= info.dist %>/css/main.css': '<%= info.scss %>/main.scss'
         }
       }
     },
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
           '<%= info.components %>/**/*.js',
           
         ],
-        dest: '<%= info.src %>/js/main.js'
+        dest: '<%= info.dist %>/js/main.js'
       },
       dev: {
         options: {
@@ -103,7 +103,7 @@ module.exports = function (grunt) {
           '<%= info.scripts %>/global.js',
           '<%= info.components %>/**/*.js',
         ],
-        dest: '<%= info.src %>/js/main.js'
+        dest: '<%= info.dist %>/js/main.js'
       }
     },
     // watch files
