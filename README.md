@@ -12,3 +12,7 @@ PHP is required for global includes
 ## Components
 
 ### buttonLink
+
+### card
+
+Bootstrap based card
