@@ -15,4 +15,4 @@ PHP is required for global includes
 
 ### card
 
-Bootstrap based card
+Bootstrap based cards
