@@ -1,7 +1,15 @@
+/// Responsive Table
+/// The idea here is a table view, using ULs
+/// 
+/// @todo Needs to be full flushed out
+/// @author Mark Handy
+/// @group Components
+
 .responsive-table {
   display : flex;
 
   flex-flow : column;
+
   ul {
     display : flex;
 
@@ -10,12 +18,15 @@
 
     list-style : none;
 
-    flex-flow : column;@include media-breakpoint-up(lg) {
+    flex-flow : column;
+    @include media-breakpoint-up(lg) {
       flex-flow : row nowrap;
     }
+
     &:first-of-type {
       background-color : grey;
     }
+
     li {
       padding : 5px 10px;
     }

@@ -1,5 +1,12 @@
+/// Bootstrap Carousel Customization
+/// 
+/// Has an otion for a thumbnail theme which will allow the use of image thumbnails
+/// rather than the traditionsl pips.
+/// @author Mark Handy
+/// @group Components
+
 .carousel {
-  // default settings
+  /// default settings
   &-caption {
     @include media-breakpoint-up(lg) {
       top : 0;
@@ -16,38 +23,47 @@
 
       text-align : initial;
 
-      background : linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+      background : linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
 
       justify-content : flex-start;
     }
   }
+
   &-control {
     &-prev,
     &-next {
       z-index : 10;
 
-      width : 30px;@include media-breakpoint-down(sm) {
+      width : 30px;
+
+      @include media-breakpoint-down(sm) {
         display : none;
       }
     }
+
     &-prev {
       padding-left : 10px;
 
       justify-content : flex-start;
     }
+
     &-next {
       padding-right : 10px;
 
       justify-content : flex-end;
     }
   }
+
   &-indicators {
     margin-bottom : 10px;
   }
-  // thumbnail theme
+
+  /// Thumbnail theme
+  /// When using image thumbnails as slide navigation
   &[data-theme='thumbnail'] {
     .carousel-indicators {
       margin-bottom : 0;
+
       li {
         display : block;
 
@@ -55,16 +71,20 @@
         height : auto;
 
         border : none;
+
         img {
           display : block;
 
           width : 100%;
         }
+
         &:hover {
           opacity : 1;
         }
+
         &.active {
           opacity : 1;
+
           img {
             outline : 1px solid $white;
           }

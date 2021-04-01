@@ -1,3 +1,10 @@
+/// Hotspot Component
+/// 
+/// This was only ever a prototype.
+/// @todo Evaluate current need
+/// @author Mark Handy
+/// @group Components
+
 .hotSpots {
   position : relative;
 
@@ -5,10 +12,13 @@
     position : relative;
     z-index : 1;
 
-    margin-bottom : 30px;@include media-breakpoint-up(md) {
+    margin-bottom : 30px;
+
+    @include media-breakpoint-up(md) {
       margin-bottom : 0;
     }
   }
+
   &-spot {
     position : absolute;
     z-index : 5;
@@ -23,7 +33,9 @@
 
     opacity : 0.8;
     border-radius : 50%;
-    background-color : $blue;@include media-breakpoint-up(md) {
+    background-color : $blue;
+
+    @include media-breakpoint-up(md) {
       display : block;
     }
 
@@ -39,10 +51,12 @@
       border : 1px solid $blue;
       border-radius : 50%;
     }
+
     &:hover {
       opacity : 1;
     }
   }
+
   &-card {
     @include media-breakpoint-up(md) {
       position : absolute;
@@ -58,26 +72,33 @@
       opacity : 0;
       border : none;
       border-radius : 2px;
-      background-color : $white;@include box_shadow(3,5);
+      background-color : $white;
+
+      @include box_shadow(3, 5);
     }
+
     &:first {
       margin-top : 30px;
     }
+
     &.show {
       visibility : visible;
 
       opacity : 1;
     }
   }
+
   // tool tip
   &-tooltip {
     &--arrow {
       border-color : $blue;
     }
+
     &--inner {
       background-color : $blue;
     }
   }
+
   // bootstrap card overides
   .card {
     &-head {
@@ -85,19 +106,25 @@
 
       padding : 5px;
 
-      color : $blue;@extend .h3;
+      color : $blue;
+
+      @extend .h3;
     }
+
     &-body {
       padding : 5px;
+
       p:last-of-type {
         margin-bottom : 0;
       }
+
       &.collapse {
         @include media-breakpoint-up(md) {
           display : flex;
         }
       }
     }
+
     &-footer {
       border : none;
       background-color : transparent;
@@ -105,13 +132,13 @@
   }
 }
 
-@keyframes
-pulsate {
+@keyframes pulsate {
   0% {
     transform : scale(1);
 
     opacity : 0.8;
   }
+
   45% {
     transform : scale(1.75);
 

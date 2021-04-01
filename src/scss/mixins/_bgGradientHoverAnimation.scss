@@ -1,15 +1,13 @@
-/*
 
-This will give the element a gradient background that will animate on hover. You can
-select the start and stop colours, as well as animation speed and how many times it
-animates
-
-
-example usage: @include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 2);
-
-
-
-*/
+/// Background Hover Animations
+/// This will give the element a gradient background that will animate on hover. You can
+/// select the start and stop colours, as well as animation speed and how many times it
+/// animates
+///
+///
+/// @author Mark Handy
+/// @group Mixin
+/// @example usage: @include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 2);
 
 
 @mixin gradientAnimation($startColour, $stopColour, $direction, $speed: 2s, $count: 5) {
@@ -20,7 +18,7 @@ example usage: @include gradientAnimation($blue, darken($blue, 10), bottom, 2s, 
     animation: gradient $speed ease $count;
   }
 
-
+  /// Animatino keyframes
   @keyframes gradient {
     0% {
       background-position: 0 0

@@ -1,11 +1,18 @@
-/// Button Links
+/// This styles groups of links
 /// Allows for the layout of groups of links/buttons
+/// 
+/// @author Mark Handy
+/// @group Components
+
 
 .linkGroup {
   display : flex;
   flex-direction : column;
 
-  margin : 20px 0;@include media-breakpoint-up(lg) {
+  margin : 20px 0;
+  // set flex direction on large screens and up
+
+  @include media-breakpoint-up(lg) {
     flex-direction : row;
   }
 
@@ -25,12 +32,22 @@
 
     border-radius : 5px;
 
-    align-items : center;@include font-size(14px, 1, 500);@include transition(all, 0.5s, ease-in-out);@include media-breakpoint-up(lg) {
+    align-items : center;
+    // font size mixin
+    @include font-size(14px, 1, 500);
+    @include transition(all, 0.5s, ease-in-out);
+    @include media-breakpoint-up(lg) {
       margin : 0 10px 0 0;
-    }  justify-content : center;
+    }
+    justify-content : center;
+
+
+
     &-primary {
       &--hollow {
-        border : 1px solid $borderColour;@include box_shadow(2, 1);
+        border : 1px solid $borderColour;
+
+        @include box_shadow(2, 1);
 
         &:hover {
           background-color : lighten($silver, 15);
@@ -39,7 +56,9 @@
 
       &--solid {
         color : $white;
-        background : $blue;@include box_shadow(3, 2);
+        background : $blue;
+
+        @include box_shadow(3, 2);
 
         &:hover {
           background : darken($blue, 10);

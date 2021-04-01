@@ -1,12 +1,17 @@
-// convert to string function
+/// Font Size Mixin
+/// @require {function} - 
+/// @author Mark Handy
+/// @group Mixin
+
+/// convert to string function
 @function to-string($value) {
   @return inspect($value);
 }
 
-// pass in any of these formats for either size or height:
-// 11px
+/// pass in any of these formats for either size or height:
+/// 11px
 
-// the rest will pass through unchanged
+/// the rest will pass through unchanged
 @mixin font-size($size: $fontSize, $height: $lineHeight, $weight: 400) {
   font-weight: $weight;
   @if str-index(to-string($size), '%') !=null or str-index(to-string($size), 'px') !=null {

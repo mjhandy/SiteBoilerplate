@@ -108,6 +108,10 @@ module.exports = function (grunt) {
     },
     // sass docs
     sassdoc: {
+      options:{
+        descriptoin: 'Boilerplate Code',
+        package: 'package.json'
+      },
       default: {
         src: [
           '<%= info.components %>',
@@ -125,6 +129,10 @@ module.exports = function (grunt) {
       sass: {
         files: ['<%= info.components %>/**/**.scss', 'scss/**.scss'],
         tasks: ['sass:dev']
+      },
+      sassdoc: {
+        files: ['<%= info.components %>/**/**.scss', 'scss/**.scss', 'scss/**/**.scss'],
+        tasks: ['sassdoc']
       },
       jshint: {
         files: ['<%= info.components %>/**/*.js', '<%= info.scripts %>/global.js'],
@@ -145,6 +153,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dev', [
     'sass',
+    'sassdoc',
     'uglify:dev',
     'watch'
   ]);

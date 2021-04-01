@@ -1,3 +1,6 @@
+/// Video Player JavaScript
+
+
 $(function () {
 
   // is there a video on the page
