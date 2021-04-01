@@ -106,6 +106,15 @@ module.exports = function (grunt) {
         dest: '<%= info.dist %>/js/main.js'
       }
     },
+    // sass docs
+    sassdoc: {
+      default: {
+        src: [
+          '<%= info.components %>',
+          '<%= info.scss %>'
+        ]
+      }
+    },
     // watch files
     watch: {
       options: { nospawn: true },

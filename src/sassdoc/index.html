@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Basesiteboilerplate - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Basesiteboilerplate - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Base site boilerplate template</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Basesiteboilerplate - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".linkGroup" data-type="css"><a href="#undefined-css-.linkGroup">.linkGroup</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="/// Gives a card depth effect.
+/// @param" data-type="css"><a href="#undefined-css-/// Gives a card depth effect.
+/// @param">/// Gives a card depth effect. /// @param</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="/// card mixin
+@mixin card($depth:1)" data-type="css"><a href="#undefined-css-/// card mixin
+@mixin card($depth:1)">/// card mixin @mixin card($depth:1)</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="card" data-type="mixin"><a href="#undefined-mixin-card">card</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="top-shadow" data-type="function"><a href="#undefined-function-top-shadow">top-shadow</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="bottom-shadow" data-type="function"><a href="#undefined-function-bottom-shadow">bottom-shadow</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.linkGroup"><h3 class="item__heading"><a class="item__name" href="#css-.linkGroup">.linkGroup</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.linkGroup {
+  display : flex;
+  flex-direction : column;
+
+  margin : 20px 0;@include media-breakpoint-up(lg) {
+    flex-direction : row;
+  }
+
+  .link {
+    position : relative;
+
+    display : inline-flex;
+
+    min-width : 64px;
+    height : 35px;
+    margin : 0 0 20px 0;
+    padding : 0 16px;
+
+    text-decoration : none;
+    letter-spacing : 1.25px;
+    text-transform : uppercase;
+
+    border-radius : 5px;
+
+    align-items : center;@include font-size(14px, 1, 500);@include transition(all, 0.5s, ease-in-out);@include media-breakpoint-up(lg) {
+      margin : 0 10px 0 0;
+    }  justify-content : center;
+    &amp;-primary {
+      &amp;--hollow {
+        border : 1px solid $borderColour;@include box_shadow(2, 1);
+
+        &amp;:hover {
+          background-color : lighten($silver, 15);
+        }
+      }
+
+      &amp;--solid {
+        color : $white;
+        background : $blue;@include box_shadow(3, 2);
+
+        &amp;:hover {
+          background : darken($blue, 10);
+        }
+      }
+    }
+
+    &amp;-secondary {
+      &amp;:hover {
+        background-color : lighten($silver, 15);
+      }
+    }
+  }
+}</code>" data-collapsed=".linkGroup { ... }"><code>.linkGroup { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button Links Allows for the layout of groups of links/buttons</p></div></section><section class="main__item container item" id="undefined-css-/// Gives a card depth effect.
+/// @param"><h3 class="item__heading"><a class="item__name" href="#css-/// Gives a card depth effect.
+/// @param">/// Gives a card depth effect. /// @param</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>/// Gives a card depth effect.
+/// @param {
+  Number
+}</code>" data-collapsed="/// Gives a card depth effect.
+/// @param { ... }"><code>/// Gives a card depth effect.
+/// @param { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Box shadow <a href="https://css-tricks.com/snippets/sass/material-shadows-mixin/">https://css-tricks.com/snippets/sass/material-shadows-mixin/</a></p></div></section><section class="main__item container item" id="undefined-css-/// card mixin
+@mixin card($depth:1)"><h3 class="item__heading"><a class="item__name" href="#css-/// card mixin
+@mixin card($depth:1)">/// card mixin @mixin card($depth:1)</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>/// card mixin
+@mixin card($depth:1) {
+  @if $depth &lt; 1 {
+    box-shadow: none;
+  } @else if $depth &gt; 5 {
+    @warn &quot;Invalid $depth `#{$depth}` for mixin `card`.&quot;;
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+}</code>" data-collapsed="/// card mixin
+@mixin card($depth:1) { ... }"><code>/// card mixin
+@mixin card($depth:1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Gives a card depth effect.</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality">Google Design</a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-card"><h3 class="item__heading"><a class="item__name" href="#mixin-card">card</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin card() { 
+  @if $depth &lt; 1 {
+    box-shadow: none;
+  } @else if $depth &gt; 5 {
+    @warn &quot;Invalid $depth `#{$depth}` for mixin `card`.&quot;;
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+ }" data-collapsed="@mixin card() { ... }"><code>@mixin card() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>card mixin</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-bottom-shadow"><code>bottom-shadow</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-top-shadow"><code>top-shadow</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-top-shadow"><h3 class="item__heading"><a class="item__name" href="#function-top-shadow">top-shadow</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function top-shadow($depth) { 
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+ }" data-collapsed="@function top-shadow($depth) { ... }"><code>@function top-shadow($depth) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Computes a top-shadow for a card effect.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$depth</code></th><td data-label="desc"><p>depth level</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>List</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-/// card mixin
+@mixin card($depth:1)"><code>/// card mixin @mixin card($depth:1)</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-card"><code>card</code></a></li></ul></section><section class="main__item container item" id="undefined-function-bottom-shadow"><h3 class="item__heading"><a class="item__name" href="#function-bottom-shadow">bottom-shadow</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function bottom-shadow($depth) { 
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+ }" data-collapsed="@function bottom-shadow($depth) { ... }"><code>@function bottom-shadow($depth) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Computes a bottom-shadow for a card effect.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$depth</code></th><td data-label="desc"><p>depth level</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>List</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-/// card mixin
+@mixin card($depth:1)"><code>/// card mixin @mixin card($depth:1)</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-card"><code>card</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Basesiteboilerplate</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

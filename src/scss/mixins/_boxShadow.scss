@@ -1,5 +1,5 @@
-// Box shadow
-// https://css-tricks.com/snippets/sass/material-shadows-mixin/
+/// Box shadow
+/// https://css-tricks.com/snippets/sass/material-shadows-mixin/
 
 /// Gives a card depth effect.
 /// @param {Number} $depth - depth level (between 1 and 5)
@@ -7,7 +7,7 @@
 /// @requires {function} top-shadow
 /// @requires {function} bottom-shadow
 
-
+/// card mixin
 @mixin card($depth:1) {
   @if $depth < 1 {
     box-shadow: none;
